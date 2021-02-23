@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="utf-8" />
-	<title>{{ page.title }}</title>
+	<title>About</title>
 	<link rel="stylesheet" href="/assets/css/styles.css">
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
@@ -14,8 +14,27 @@
 </head>
 <body>
 
-	{% include navigation.html %}
-    {{ content }}
+	<nav>
+	
+	<a href="/" >
+		Home
+	</a>
+	
+	<a href="/about.html" class="current">
+		About
+	</a>
+	
+	<a href="/blog.html" >
+		Blog
+	</a>
+	
+</nav>
+    <h1 id="about-page">About page</h1>
+
+<p>This page tells you a little bit about me.</p>
+
+<p>Check out the <a href="index.html">map page</a>.</p>
+
 
 </body>
 </html>

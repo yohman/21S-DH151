@@ -1,110 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
 
-<!-- jquery  -->
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-<!-- leaflet -->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 
-<!-- bootstrap -->
-<link href="http://cdn.bootcss.com/bootswatch/3.1.1-1/css/lumen/bootstrap.min.css" rel="stylesheet">
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-<!-- styling -->
-<style type="text/css">
-	#map { height: 85%; }
-	#addButton {margin-left: 4em;}
-</style>
-
-<!-- javascript -->
-<script type="text/javascript">
-
-var map;
-var markerArray = [];
-
-$( document ).ready(function() {
-	// create a map in the "map" div, set the view to a given place and zoom
-	map = L.map('map').setView([34,-118], 3);
-
-	// add an OpenStreetMap tile layer
-	L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png', {
-	    attribution: '&copy; <a href="http://osm.org/copyright">MapQuest</a> contributors'
-	}).addTo(map);
-
-	// function call to map data from a google spreadsheet
-	getGoogleSpreadsheetData();
-});
-
-function getGoogleSpreadsheetData()
-{
-	// Google spreadsheet access parameters
-	var spreadsheetID = '1lJW5lpa6mmkog3krTtDNn7PVkB_H1AIgrCXwfhtR2wY';
-	var worksheetID = 'o62uffr';
-
-	// URL string that asks for google spreadsheet data in JSON format
-	var url = 'https://spreadsheets.google.com/feeds/list/'+spreadsheetID+'/'+worksheetID+'/public/values?alt=json';
-
-	// "call" google to get the data
-	$.getJSON(url,function(data){
-
-		console.log(url)
-		// loop through the results by each entry (row)
-		$.each(data.feed.entry,function(i,val){
-
-
-			// assign parameters for mapping and infowindow
-			// note that this will be different depending on header titles
-			var lng = val.gsx$longitude.$t;
-			var lat = val.gsx$latitude.$t;
-			var title = val.gsx$firstname.$t;
-			var coded = val.gsx$haveyoucodedbefore.$t;
-			var from = val.gsx$whereareyoufrom.$t;
-			var something = val.gsx$somethinginterestingaboutyouinonesentence.$t;
-
-			// now let's define what our marker will look like
-			var iconUrl;
-			var iconSize = [32,44];
-			var markerOptions;
-
-			// change the marker depending on user response
-			switch (coded) {
-				case 'No':
-					iconUrl = "icons/no.png";
-					break;
-				case 'Yes':
-					iconUrl = "icons/home.png";
-					break;
-				default:
-					iconUrl = "icons/no.png";
-					break;
-			} 
-
-			var icon = L.icon({iconUrl: iconUrl, iconSize: iconSize});
-
-			// now create the marker, add it the map, and give it a popup 
-			var thisMarker = new L.Marker([lat,lng],{icon:icon}).addTo(map)
-			    .bindPopup('<h3>' + title + '</h3><div class="btn-sm btn-primary">'+from+'</div>'+ something);
-
-			// push marker into an array
-			markerArray.push(thisMarker);
-
-		});
-
-		// put markers into a group...
-		var group = L.featureGroup(markerArray).addTo(map);
-
-		// ... so that you can fit (zoom) the map so that all markers are in view
-		map.fitBounds(group.getBounds().pad(0.05));
-	})
-}
-
-</script>
 </head>
 <body>
-	<h2>Digital Mapping Introduction Exercise: Where are we from?<a href="http://goo.gl/forms/We2oTdpLG8"><button id="addButton" class="btn-danger btn-sm">+Add yourself here</button></a></h2>
-	<div id="map"></div>
+	<div id="map" style="height:800px"></div>
+
+	<script>
+		var map = L.map('map').setView([34.07381780761041, -118.44177995896911], 17);
+
+		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			id: 'examples.map-i875mjb7'
+		}).addTo(map);
+	</script>
 </body>
 </html>

@@ -1,34 +1,21 @@
 ---
-title: Your first leaflet map
+layout: map
+lat: 33.9
+lon: -118.3
+zoom: 10
 ---
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ page.title }}</title>
-	<meta charset="utf-8" />
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
-		
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
-	
-
-</head>
-<body>
 
 <div id="map" style="width: 600px; height: 400px;"></div>
 
 <script>
-	var map = L.map('map').setView([51.505, -0.09], 13);
+	var map = L.map('map').setView([ {{ page.lat }}, {{page.lon}}], {{page.zoom}});
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
-	L.marker([51.5, -0.09]).addTo(map)
+	L.marker([{{ page.lat }},{{ page.lon }}]).addTo(map)
 	    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
 	    .openPopup();	
 
 </script>	
-</body>
-</html>

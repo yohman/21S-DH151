@@ -26,13 +26,13 @@ Install the text editor [Visual Studio Code](https://code.visualstudio.com/downl
 
 ### MacOS
 Install ruby
-```
+```bash
 # Install Ruby
 brew install ruby
 ```
 
 Add the brew ruby path to your shell configuration:
-```
+```bash
 # If you're using Zsh (most likely)
 echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
 
@@ -45,7 +45,7 @@ echo $SHELL
 
 Relaunch your terminal and check your Ruby setup:
 
-```
+```bash
 which ruby
 # /usr/local/opt/ruby/bin/ruby
 

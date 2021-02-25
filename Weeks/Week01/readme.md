@@ -1,4 +1,4 @@
-# Week 1: Introduciton to Web Mapping
+# Week 1: Introduction to Web Mapping
 
 ## Setup for the course
 

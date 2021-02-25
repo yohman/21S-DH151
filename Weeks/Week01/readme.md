@@ -11,7 +11,6 @@ You will need:
   - install VS Code
   - install Jekyll
 
-
 ## Install [Git](https://git-scm.com/)
    1. for MacOS, choose "homebrew" option (it takes about 10-15 mins to install homebrew)
    2. Open terminal

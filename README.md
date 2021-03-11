@@ -18,61 +18,9 @@ The class will be conducted as a studio course, and students will form groups to
 
 The class will meet once a week, and will consist of a combination of short lectures, hands on training on different web technologies, and a segment dedicated for studio project group activities. In addition, I hope to invite current practitioners in the field of web-based GIS as guest speakers and lecturers. Students will be assigned weekly readings and assignments geared to train them on the technical skills necessary. These assignments must be completed prior to coming to each class, and students will be asked to demonstrate their grasp of these technologies via class participation and discussions.
 
-# Grading
-Weekly Assignments – 20%
+# Weekly schedule
 
-Mid-term project – 20%
-
-Final project – 50%
-
-Participation – 10%
-
-# Studio Group Projects
-
-Students will be tasked to create a web-based mapping site for researching neighborhoods that may include queryable statistical layers on demographics, housing, transportation or other planning related datasets. In addition, projects must incorporate “streaming” data sources from online data providers such as Twitter, Metro LA, US Census, or other open data portal datasets.
-
-Within the first 5 weeks of the course, students will be asked to submit, as well as present to the class, a proposal, scope and development plan for their portion of the website. Initial tasks will include:
-
-a web design strategy to understand web based user experiences and designing effective user interfaces
-research available data for your topic and put together a data plan
-come up with a full web-site proposal (including wire-frames, screenshot sketches and diagrams, timelines and budget)
-research of available web technologies and come up with a technology assessment
-compiling query-able spatial data layers, designing an intuitive user flow and interface for their data, and developing an interactive maproom using Leaflet and MySQL (or comparable technologies).
-A weekly “Thinking captain’s” blog entry that reflects on the student’s understanding on the technologies covered and how it relates to their project
-Week 6 will be reserved for project presentations, and weeks 7-10 will be dedicated towards development time, and will focus heavily on studio work.
-
-The final product will result in an intuitive, searchable, map-based website, and will be used by future humanities students as well as the general public.
-
-Why you should consider taking this course
-
-- Learn how and why governments and non-profits are shifting to the web for their GIS solutions
-- Learn the principles of web-based cartography
-- Learn about user interface, user experience, and graphic design
-- Learn web design skills specific to creating internet mapping solutions
-- Learn about API’s (Application Programming Interface) and how to leverage technologies like Google Maps and Leaflet
-- Learn how to publish map services using ArcGIS Server and MySQL
-- Get practical, hands-on instructions on the basic concepts of building a web-GIS platform
-
-## Technology skills you will learn
-
-- WordPress
-- HTML
-- CSS/Bootstrap
-- Javascript/jQuery
-- MySQL
-- Leaflet Javascript API
-- ArcGIS Server
-
-## Readings
-
-[Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code](https://handsondataviz.org/)
-- Jack Dougherty, Ilya Ilyankou	
-
-[Introduction to Web Mapping](http://132.72.155.230:3838/js/index.html)
-- Michael Dorman
-
-## Weekly schedule
-
+Topics and lecture plans subject to change:
 
 <table>
   <tr>
@@ -144,55 +92,128 @@ Why you should consider taking this course
   </tr>
 </table>
 
-Week 2: Story Maps
-Group creation 
-4 per group
+<table>
+  <tr>
+    <th colspan=2>
+      Week 3: It's all about data
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lecture
+    </td>
+    <td>
+      <li>Thinking cap discussions</li>
+      <li>Data</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Javascript and leaflet</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
 
-Lecture: Story maps
-Lab 1: HTML, CSS, a little bit of Javascript
-Group Assignment #1: Group proposal
+<table>
+  <tr>
+    <th colspan=2>
+      Week 4: It's all about data
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lecture
+    </td>
+    <td>
+      <li>Thinking cap discussions</li>
+      <li>Data</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Javascript interactivity with jQuery</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
 
-Thinking cap: It’s all about data…
-Find sources of data that interest you (or your group), and write an entry that discusses the following elements:
-Is the data public? Private? Why?
-How “clean” is the data?
-What are the limitations of the data?
-What can you do with the data? How would you clean it up? Visualize it? Map it?
 
-Week 3:
-Lecture: Data
-Lab 3: Javascript and leaflet
-Group Assignment #2: Sketch your data story
+# Grading
+Weekly Assignments – 20%
 
-Week 4
-Lecture: 
-Lab 4-1: jQuery
-Lab 4-2: Building a story map framework
+Mid-term project – 20%
 
-Week 5
-Lecture: UI
-Lab5: Building a story map/Bootstrap
+Final project – 50%
 
-------------------
-They are able to create a story map, driven by a google doc, or csv tbd
+Participation – 10%
 
-Week 6
-Mid-term presentations
+# Studio Group Projects
 
-Week 7
-Lecture: Census data
-Lab: Choropleth maps
+Students will be tasked to create a web-based mapping site for researching neighborhoods that may include queryable statistical layers on demographics, housing, transportation or other planning related datasets. In addition, projects must incorporate “streaming” data sources from online data providers such as Twitter, Metro LA, US Census, or other open data portal datasets.
 
-Week 8
-Lecture: API’s
-Lab 7: Mapping “live” data
+Within the first 5 weeks of the course, students will be asked to submit, as well as present to the class, a proposal, scope and development plan for their portion of the website. Initial tasks will include:
 
-Week 9
-Lecture: Time
-Lab 8: Building a time slider
+a web design strategy to understand web based user experiences and designing effective user interfaces
+research available data for your topic and put together a data plan
+come up with a full web-site proposal (including wire-frames, screenshot sketches and diagrams, timelines and budget)
+research of available web technologies and come up with a technology assessment
+compiling query-able spatial data layers, designing an intuitive user flow and interface for their data, and developing an interactive maproom using Leaflet and MySQL (or comparable technologies).
+A weekly “Thinking captain’s” blog entry that reflects on the student’s understanding on the technologies covered and how it relates to their project
+Week 6 will be reserved for project presentations, and weeks 7-10 will be dedicated towards development time, and will focus heavily on studio work.
 
-Week 10
-Lecture: Data analytics
-Lab 9: Charts, meetrics
+The final product will result in an intuitive, searchable, map-based website, and will be used by future humanities students as well as the general public.
+
+Why you should consider taking this course
+
+- Learn how and why governments and non-profits are shifting to the web for their GIS solutions
+- Learn the principles of web-based cartography
+- Learn about user interface, user experience, and graphic design
+- Learn web design skills specific to creating internet mapping solutions
+- Learn about API’s (Application Programming Interface) and how to leverage technologies like Google Maps and Leaflet
+- Learn how to publish map services using ArcGIS Server and MySQL
+- Get practical, hands-on instructions on the basic concepts of building a web-GIS platform
+
+## Technology skills you will learn
+
+- WordPress
+- HTML
+- CSS/Bootstrap
+- Javascript/jQuery
+- MySQL
+- Leaflet Javascript API
+- ArcGIS Server
+
+## Readings
+
+[Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code](https://handsondataviz.org/)
+- Jack Dougherty, Ilya Ilyankou	
+
+[Introduction to Web Mapping](http://132.72.155.230:3838/js/index.html)
+- Michael Dorman
 
 

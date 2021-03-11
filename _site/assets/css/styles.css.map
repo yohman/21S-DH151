@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import \"main\";",
-		".current {\r\n    color: green;\r\n  }"
+		"\r\nbody,html {\r\n\tmargin:0;\r\n\theight:100%;\r\n\twidth:100%;\r\n}\r\n\r\n#map {\r\n\theight: 100%;\r\n\t// height: 100vh;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n\tgrid-template-rows: 50px 1fr;\r\n\tgrid-template-columns: 200px 1fr;\r\n\tgrid-template-areas: \r\n\t\"header header\"\r\n\t\"sidebar content\";\r\n}\r\n\r\n.header {\r\n\tpadding:10px;\r\n\tgrid-area: header;\r\n}\r\n.sidebar {\r\n\tgrid-area: sidebar;\r\n}\r\n.content {\r\n\tgrid-area: content;\r\n}\r\n"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb"
+	"mappings": "ACCA,AAAA,IAAI,EAAC,IAAI,CAAC,EACT,MAAM,EAAC,CAAC,EACR,MAAM,EAAC,IAAI,EACX,KAAK,EAAC,IAAI,GACV;;AAED,AAAA,IAAI,CAAC,EACJ,MAAM,EAAE,IAAI,GAEZ;;AAED,AAAA,IAAI,CAAC,EACD,OAAO,EAAE,IAAI,EAChB,kBAAkB,EAAE,QAAQ,EAC5B,qBAAqB,EAAE,SAAS,EAChC,mBAAmB,EACnB,iCACiB,GACjB;;AAED,AAAA,OAAO,CAAC,EACP,OAAO,EAAC,IAAI,EACZ,SAAS,EAAE,MAAM,GACjB;;AACD,AAAA,QAAQ,CAAC,EACR,SAAS,EAAE,OAAO,GAClB;;AACD,AAAA,QAAQ,CAAC,EACR,SAAS,EAAE,OAAO,GAClB"
 }

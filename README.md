@@ -65,44 +65,84 @@ Why you should consider taking this course
 
 ## Readings
 
-Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code
-Jack Dougherty, Ilya Ilyankou	
-Introduction to Web Mapping
-Michael Dorman
-https://www.e-education.psu.edu/geog585/node/643 
+[Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code](https://handsondataviz.org/)
+- Jack Dougherty, Ilya Ilyankou	
+
+[Introduction to Web Mapping](http://132.72.155.230:3838/js/index.html)
+- Michael Dorman
 
 ## Weekly schedule
 
-### Week 1: Intro to Web GIS
 
-Lecture
-Welcome
-Review Class Syllabus
-Introduction to Web GIS
+<table>
+  <tr>
+    <th colspan=2>
+      Week 1: Intro to Web GIS
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lecture
+    </td>
+    <td>
+      <li>Introductions</li>
+      <li>Syllabus review</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Setting up for the course</li>
+      <li>Hello World Map</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+    </td>
+  </tr>
+</table>
 
-Class setup
-
-VS Code
-Git
-GitHub repository
-Enable GitHub pages
-
-Lab 1: Hello World (Map)
-
-Thinking cap assignment:
-
-Find a web mapping site that excites you, and respond to the following prompts:
-Why does this website “speak” to you?
-How does the mapping work, and does it “work?” i.e., in your opinion, does it do what it’s supposed to do?
-If you could change it, how would you go about it?
-What technologies does the map use? I.e. Google maps, leaflet, mapbox, etc?
-
-Assignment:
-Read Chapter 1 HTML and do the 1.10 Exercise with the following modifications
-
-
-Upload your html file to your GitHub repo
-
+<table>
+  <tr>
+    <th colspan=2>
+      Week 2: Spatial Narratives-Story Maps
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lecture
+    </td>
+    <td>
+      <li>Group creations</li>
+      <li>Thinking cap discussions</li>
+      <li>Story maps</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>HTML, CSS, a little bit of Javascript</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+    </td>
+  </tr>
+</table>
 
 Week 2: Story Maps
 Group creation 

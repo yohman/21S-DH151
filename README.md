@@ -130,7 +130,7 @@ Topics and lecture plans subject to change:
 <table>
   <tr>
     <th colspan=2>
-      Week 4: It's all about data
+      Week 4: Building a narrative-Storyboarding
     </th>
   </tr>
   <tr>
@@ -139,7 +139,7 @@ Topics and lecture plans subject to change:
     </td>
     <td>
       <li>Thinking cap discussions</li>
-      <li>Data</li>
+      <li>Storyboarding</li>
     </td>
   </tr>
   <tr>
@@ -148,6 +148,7 @@ Topics and lecture plans subject to change:
     </td>
     <td>
       <li>Javascript interactivity with jQuery</li>
+      <li>Building a story map framework
     </td>
   </tr>
   <tr>
@@ -162,6 +163,47 @@ Topics and lecture plans subject to change:
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th colspan=2>
+      Week 5: User Interface Design
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lecture
+    </td>
+    <td>
+      <li>User Interface Design</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Bootstrap</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan=2>
+      Week 6: Midterm presentations
+    </th>
+  </tr>
+</table>
 
 # Grading
 Weekly Assignments – 20%

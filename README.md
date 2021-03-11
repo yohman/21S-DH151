@@ -53,7 +53,7 @@ Why you should consider taking this course
 - Learn how to publish map services using ArcGIS Server and MySQL
 - Get practical, hands-on instructions on the basic concepts of building a web-GIS platform
 
-Technology skills you will learn
+## Technology skills you will learn
 
 - WordPress
 - HTML
@@ -62,4 +62,97 @@ Technology skills you will learn
 - MySQL
 - Leaflet Javascript API
 - ArcGIS Server
+
+## Readings
+
+Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code
+Jack Dougherty, Ilya Ilyankou	
+Introduction to Web Mapping
+Michael Dorman
+https://www.e-education.psu.edu/geog585/node/643 
+
+## Weekly schedule
+
+### Week 1: Intro to Web GIS
+
+Lecture
+Welcome
+Review Class Syllabus
+Introduction to Web GIS
+
+Class setup
+
+VS Code
+Git
+GitHub repository
+Enable GitHub pages
+
+Lab 1: Hello World (Map)
+
+Thinking cap assignment:
+
+Find a web mapping site that excites you, and respond to the following prompts:
+Why does this website “speak” to you?
+How does the mapping work, and does it “work?” i.e., in your opinion, does it do what it’s supposed to do?
+If you could change it, how would you go about it?
+What technologies does the map use? I.e. Google maps, leaflet, mapbox, etc?
+
+Assignment:
+Read Chapter 1 HTML and do the 1.10 Exercise with the following modifications
+
+
+Upload your html file to your GitHub repo
+
+
+Week 2: Story Maps
+Group creation 
+4 per group
+
+Lecture: Story maps
+Lab 1: HTML, CSS, a little bit of Javascript
+Group Assignment #1: Group proposal
+
+Thinking cap: It’s all about data…
+Find sources of data that interest you (or your group), and write an entry that discusses the following elements:
+Is the data public? Private? Why?
+How “clean” is the data?
+What are the limitations of the data?
+What can you do with the data? How would you clean it up? Visualize it? Map it?
+
+Week 3:
+Lecture: Data
+Lab 3: Javascript and leaflet
+Group Assignment #2: Sketch your data story
+
+Week 4
+Lecture: 
+Lab 4-1: jQuery
+Lab 4-2: Building a story map framework
+
+Week 5
+Lecture: UI
+Lab5: Building a story map/Bootstrap
+
+------------------
+They are able to create a story map, driven by a google doc, or csv tbd
+
+Week 6
+Mid-term presentations
+
+Week 7
+Lecture: Census data
+Lab: Choropleth maps
+
+Week 8
+Lecture: API’s
+Lab 7: Mapping “live” data
+
+Week 9
+Lecture: Time
+Lab 8: Building a time slider
+
+Week 10
+Lecture: Data analytics
+Lab 9: Charts, meetrics
+
 

@@ -3,75 +3,19 @@
 <head>
 	<title>Leaflet Quick Start Guide Example</title>
 	<meta charset="utf-8" />
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
-		
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-	<div class="header">{% include navigation.html %}</div>
-	<div class="sidebar">{% include sidebar.html %}</div>
+	<div class="header">
+		My header
+	</div>
+	<div class="sidebar">
+		My sidebar
+	</div>
 	<div class="content">
-
-		<div id="map"></div>
-
-		<script>
-
-			// let's create some data
-			const data = [
-				{
-					'title':'Hello Tokyo',
-					'lat': 35.6762,
-					'lon': 139.6503
-				},
-				{
-					'title':'Hello Bangkok',
-					'lat': 13.7563,
-					'lon': 100.5018
-				},
-				{
-					'title':'Hello LA',
-					'lat': 34.0522,
-					'lon': -118.2437
-				},
-			]
-
-			var map = L.map('map').setView([34,-117], 2);
-
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			}).addTo(map);
-			
-			// loop through data
-			data.forEach(function(item,index){
-				console.log(item,index)
-				L.marker([item.lat,item.lon]).addTo(map)
-					.bindPopup(item.title)
-					.openPopup();	
-			})
-
-
-			// var marker = L.marker([34,-117]).addTo(map)
-			// 		.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-			// 		.openPopup();	
-
-
-			// create an object to put your markers in
-			// var markers = {}
-
-			// {% for place in site.data.places %}
-			// 	marker = L.marker([{{ place.lat }},{{ place.lon }}]).addTo(map)
-			// 			.bindPopup('{{ place.description }}')
-				
-			// 	// add the marker to the markers object
-			// 	markers[{{ forloop.index }}] = marker
-			// {% endfor %}
-
-		</script>	
-
+		My map
 	</div>
 
 </body>

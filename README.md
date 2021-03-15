@@ -71,6 +71,7 @@ Topics and lecture plans subject to change:
       <li>Group creations</li>
       <li>Thinking cap discussions</li>
       <li>Story maps</li>
+      <li>Git</li>
     </td>
   </tr>
   <tr>
@@ -79,6 +80,7 @@ Topics and lecture plans subject to change:
     </td>
     <td>
       <li>HTML, CSS, a little bit of Javascript</li>
+      <li>Using Git in VS Code</li>
     </td>
   </tr>
   <tr>

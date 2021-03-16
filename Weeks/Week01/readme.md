@@ -1,5 +1,10 @@
 # Week 1: Introduction to Web Mapping
 
+## Lecture
+
+- https://yohman.github.io/21S-DH151/Weeks/Week01/W01-Lecture.slides.html#/
+
+
 ## Setup for the course
 
 You will need:

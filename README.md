@@ -5,6 +5,10 @@ Instructor: Yoh Kawano (yohman@gmail.com)
 
 Time: Mondays 2:00 – 4:50pm
 
+# Pre-class Survey
+
+- Make sure to take [this survey](https://forms.gle/19nZjswKUwJTdZiZA) before class begins
+
 # Overview
 
 As a digital humanist, you are at the crossroads of three simple inquiries:  Where did it happen?  When did it happen?  Why did it happen? Space and time are forever interlinked, and the digital revolution has made it such that the visualization of the “spatial” and the “temporal” brings possibilities to interrogate, analyze, reveal, narrate and discover new dimensions that may otherwise remain dormant in its original state. In today’s Internet centered, social media frenzied society, spatial data is becoming one with the web. Twitter, Facebook, TikTok, Google Maps, Leaflet are examples of geospatial technologies centered around the notion that “location,”  “mobility,” and “time” are correlated, and they matter. Humanists are asking new questions, demanding justice from data that did not exist a decade ago, resulting in the creation of compelling web-based mapping applications that are empowering the public to become online cartographers.

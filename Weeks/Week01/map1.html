@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leaflet Quick Start Guide Example</title>
+	<title>Hello Map</title>
 	<meta charset="utf-8" />
 
+	<!-- bring in leaflet -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
 		
+	<!-- leaflet's stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
+	
+	<!-- inhouse styles -->
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-	<div class="header">{% include navigation.html %}</div>
-	<div class="sidebar">{% include sidebar.html %}</div>
+	<div class="header"></div>
+	<div class="sidebar"></div>
 	<div class="content">
 
 		<div id="map"></div>
@@ -29,7 +33,6 @@
 			var marker = L.marker([34,-117]).addTo(map)
 					.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
 					.openPopup();	
-
 
 		</script>	
 

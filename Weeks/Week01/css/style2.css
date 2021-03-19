@@ -18,12 +18,15 @@ body {
 }
 
 .header {
-	grid-area: header;
 	padding:10px;
+	grid-area: header;
+	color: white;
+	background-color:#444;
 }
 .sidebar {
-	grid-area: sidebar;
 	padding:10px;
+	background-color:dimgrey;
+	grid-area: sidebar;
 }
 .content {
 	grid-area: content;

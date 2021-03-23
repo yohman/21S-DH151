@@ -189,7 +189,7 @@ Inside the `<body></body>` tags, and right after that last closing `</div>` tag,
 Delete the alert and console lines. Add the following leaflet "starter" code inside the `<script></script>` tags:
 
 ```javascript
-var map = L.map('map').setView([34.0697,-118.4432], 15);
+var map = L.map('map').setView([34.0697,-118.4432], 17);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

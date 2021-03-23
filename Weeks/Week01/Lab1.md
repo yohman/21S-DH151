@@ -69,6 +69,13 @@ Enter the following code:
 > 3. What do you think is a stylesheet?
 > 4. What are classes?
 
-Save the file as `index.html`. 
+Save the file and open it in chrome. Hint: right click on your `index.html` file and `reveal in file explorer`. Then, double click on the file.
 
+> What do you see in the browser?
+> 1. What happens if you change the "Hello World" text to something else?
+> 1. Where did your sidebar and content go?
+
+Open the Developer tools
+
+<kbd><img src="images/developertools.png"></kbd>
 

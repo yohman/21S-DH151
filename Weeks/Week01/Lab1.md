@@ -16,9 +16,23 @@ Copy your repo URL
 
 <kbd><img src="images/gitcopy.png"></kbd>
 
+## Set up VSCode
+
 Open VS Code
 
-Go to File, New File (or ctrl-N/command-N)
+In your Welcome window, (1) click on `clone repository`, and (2) enter your repo url in the text box.
+
+<kdb><img src="images/vsclone.png"></kbd>
+
+If you are prompted to open the repository, do so.
+
+Click on the (1) `New folder` icon, and enter `Week1`
+
+<kbd><img src="images/vs_newfolder.png">
+	
+Click on the (1) `New file` icon, and enter `index.html`
+
+<kbd><img src="images/vs_index.png">
 
 Enter the following code:
 

@@ -237,6 +237,110 @@ Topics and lecture plans subject to change:
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th colspan=2>
+      Week 7: Census Data
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Choropleth maps on the web</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan=2>
+      Week 8: Data API's
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Mapping "live" data</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan=2>
+      Week 9: Time
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Working with temporal data</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan=2>
+      Week 10: Data Analytics
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Lab
+    </td>
+    <td>
+      <li>Charts, displaying metrics</li>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Assignments
+    </td>
+    <td>
+      <li>Thinking cap</li>
+      <li>Coding assignment</li>
+      <li>Group Assignment</li>
+    </td>
+  </tr>
+</table>
+
 # Studio Group Projects
 
 Students will be tasked to create a web-based mapping site for researching neighborhoods that may include queryable statistical layers on demographics, housing, transportation or other planning related datasets. In addition, projects must incorporate “streaming” data sources from online data providers such as Twitter, Metro LA, US Census, or other open data portal datasets.

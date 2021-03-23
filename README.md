@@ -341,6 +341,14 @@ Topics and lecture plans subject to change:
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th colspan=2>
+      Week 11: Final presentations
+    </th>
+  </tr>
+</table>
+
 # Studio Group Projects
 
 Students will be tasked to create a web-based mapping site for researching neighborhoods that may include queryable statistical layers on demographics, housing, transportation or other planning related datasets. In addition, projects must incorporate “streaming” data sources from online data providers such as Twitter, Metro LA, US Census, or other open data portal datasets.

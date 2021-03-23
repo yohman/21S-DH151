@@ -1,6 +1,14 @@
 # Lab 1: Let's make an interactive web map
 
-First, make sure you have a GitHub account, and a dedicated repo for this course.
+## Set up your class GitHub repo
+
+First, we need to make sure you have a GitHub account, and a dedicated repo for this course.
+
+Go to your GitHub page, click on "Repositories" and "New."
+
+Enter the following information:
+
+<kbd><img src="images/createrepo.png"></kbd>
 
 On GitHub, go to your course repo (should look something like this: <https://github.com/yohman/21S-DH151>).
 

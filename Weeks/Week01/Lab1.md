@@ -169,3 +169,34 @@ Replace the "My Map" text in your `content` div with the following:
 
 ### Part 3: Javascript time
 
+Now we are finally ready to create our interactive web map. Remember that interactive web development uses Javascript, so we first need to create a space in our html page that allows us to write javascript code.
+
+Inside the `<body></body>` tags, and right after that last closing `</div>` tag, enter the following:
+
+```html
+<script>
+	alert('hello javascript alert!')
+	console.log('hello console!')
+</script>
+```
+
+> Save the file, and refresh the page in your browser. 
+> 1. What happens?
+> 1. Open your developer tools/console window. Do you see your message?
+
+### Part 4: Leaflet javascript
+
+Delete the alert and console lines. Add the following leaflet "starter" code inside the `<script></script>` tags:
+
+```javascript
+var map = L.map('map').setView([34.0697,-118.4432], 15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var marker = L.marker([34.0697,-118.4432]).addTo(map)
+		.bindPopup('The Technology Sandbox<br> Where Yoh is sitting this very moment')
+		.openPopup();	
+```
+

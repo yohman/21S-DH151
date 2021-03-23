@@ -28,11 +28,11 @@ If you are prompted to open the repository, do so.
 
 Click on the (1) `New folder` icon, and enter `Week1`
 
-<kbd><img src="images/vs_newfolder.png">
+<kbd><img src="images/vs_newfolder.png"></kdb>
 	
 Click on the (1) `New file` icon, and enter `index.html`
 
-<kbd><img src="images/vs_index.png">
+<kbd><img src="images/vs_index.png"></kbd>
 
 Enter the following code:
 

@@ -53,10 +53,10 @@ Enter the following code:
 		Hello World
 	</div>
 	<div class="sidebar">
-		
+		My Sidebar
 	</div>
 	<div class="content">
-
+		My Map
 	</div>
 
 </body>
@@ -75,7 +75,97 @@ Save the file and open it in chrome. Hint: right click on your `index.html` file
 > 1. What happens if you change the "Hello World" text to something else?
 > 1. Where did your sidebar and content go?
 
-Open the Developer tools
+Open the Developer tools as shown below (or Ctrl+Shift+I)
 
 <kbd><img src="images/developertools.png"></kbd>
+
+Click on the `console` tab
+
+> What do you see in the console?
+> How may you fix the error?
+
+## Create a css stylesheet file
+
+As noted, the html code assumes you have a css file.
+
+Create a new folder named "css" inside your `Week1` folder.
+
+Create a new file named `style.css` in the `css` folder
+
+Enter the following code:
+
+```css
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+#map {
+	height: 100%;
+}
+
+body {
+    display: grid;
+	grid-template-rows: 80px 1fr;
+	grid-template-columns: 250px 1fr;
+	grid-template-areas: 
+	"header header"
+	"sidebar content";
+}
+
+.header {
+	grid-area: header;
+	padding:10px;
+    background-color: #333;
+}
+.sidebar {
+	grid-area: sidebar;
+	padding:10px;
+    background-color: #555;
+}
+.content {
+	grid-area: content;
+}
+```
+
+Save the file, and refresh your browser page that has `index.html`
+
+> How did the css file affect the page?
+> 1. The text in your header is now black on a dark background. Change the text color to white (hint: use `font-color`)
+> 1. Choose colors of your liking, and modify the `background-color` values for your `header` and `sidebar`
+> 1. Modify the `font-color` appropriately so that there is enough contrast between the text color and the background color.
+
+## Map time!
+
+Now it is time to add a map to our html page. This is a multi-step process that entails the following:
+
+1. Bring the leaflet javascript library into the html page
+1. Bring the leaflet css into the html page
+1. Add a `<div>` to put the map in
+1. Add leaflet code to create the map
+
+Take a moment to observe the [leaflet](https://leafletjs.com) website.
+
+### Part 1: Bring in leaflet
+We can bring the leaflet javascript and css libraries into our html page using a [cdn](https://leafletjs.com/download.html)
+
+Put the following code in the `<head>` area of your `index.html` file.
+
+```html
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+```
+> Did you remember to indent your code? Unlike, say, Python, html indentation is not required, but it is always a good idea to keep your code "clean" by following indentation standards throughout your code
+
+### Part 2: Create a map div
+
+Replace the "My Map" text in your `content` div with the following:
+
+```html
+<div id="map"></div>
+```
+
+### Part 3: Javascript time
 

@@ -1,5 +1,13 @@
 # Lab 1: Let's make an interactive web map
 
+First, make sure you have a GitHub account, and a dedicated repo for this course.
+
+On GitHub, go to your course repo (should look something like this: <https://github.com/yohman/21S-DH151>).
+
+Copy your repo URL
+
+<kbd><img src="images/gitcopy.png"></kbd>
+
 Open VS Code
 
 Go to File, New File (or ctrl-N/command-N)
@@ -32,3 +40,13 @@ Enter the following code:
 </body>
 </html>
 ```
+
+> What do you observe in the code? 
+> 1. Define the three top level elements
+> 2. How do you write comments in HTML?
+> 3. What do you think is a stylesheet?
+> 4. What are classes?
+
+Save the file as `index.html`. 
+
+

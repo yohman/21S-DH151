@@ -221,4 +221,7 @@ VS Code comes replete with GitHub features. Let's take full advantage of them.
 
 There is one step left. You have just commited your changes to your _local_ repo. You need to **push** your changes to your _online_ GitHub repo. 
 
+1. Click on the "more actions" button (triple dot)
+1. Click on `Push`
+
 <kbd><img src="images/vs_push.png"></kbd>

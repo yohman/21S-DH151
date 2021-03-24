@@ -200,3 +200,25 @@ var marker = L.marker([34.0697,-118.4432]).addTo(map)
 		.openPopup();	
 ```
 
+> ### Make it your own
+> Now that you have command over your maproom, modify it and make it your own. Try:
+> 1. Change the map marker location to a place of your interest
+> 1. Add relevant content in the header and sidebar sections
+> 1. Change the colors in the stylesheet, and if you are adventurous, change other stylesheet parameters
+> 1. Add more markers to the map, with appropriate popup content
+
+## Push your new files to your GitHub repo
+
+Now that you are satisfied with your _local_ version of your maproom, it is time to add it to your GitHub repo.
+
+VS Code comes replete with GitHub features. Let's take full advantage of them. 
+
+1. Click on the `Source Control` tab, check that you have files that have been added/modified, and then
+1. add a message text for your commit, and
+1. commit your changes by clicking on the checkbox icon.
+
+<kbd><img src="images/vs_commit.png"></kbd>
+
+There is one step left. You have just commited your changes to your _local_ repo. You need to **push** your changes to your _online_ GitHub repo. 
+
+<kbd><img src="images/vs_push.png"></kbd>

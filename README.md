@@ -390,7 +390,7 @@ Why you should consider taking this course
 [Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code](https://handsondataviz.org/)
 - Jack Dougherty, Ilya Ilyankou	
 
-[Introduction to Web Mapping](http://132.72.155.230:3838/js/index.html)
+[Introduction to Web Mapping](https://geobgu.xyz/web-mapping2/)
 - Michael Dorman
 
 

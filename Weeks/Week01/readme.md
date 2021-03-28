@@ -7,7 +7,7 @@
 - Introductions
 - Lecture
   - https://yohman.github.io/21S-DH151/Weeks/Week01/W01-Lecture.slides.html#/
-- [Lab 1: Let's make an interactive map](lab/)
+- [Lab 1: Let's make an interactive map](Lab/)
 
 ## Setup for the course
 You will need:

@@ -14,7 +14,7 @@ On GitHub, go to your course repo (should look something like this: <https://git
 
 Copy your repo URL
 
-<kbd><img src="images/gitcopy.png"></kbd>
+<kbd><img src="../images/gitcopy.png"></kbd>
 
 ## Set up VSCode
 
@@ -22,17 +22,17 @@ Open VS Code
 
 In your Welcome window, (1) click on `clone repository`, and (2) enter your repo url in the text box.
 
-<kdb><img src="images/vsclone.png"></kbd>
+<kdb><img src="../images/vsclone.png"></kbd>
 
 If you are prompted to open the repository, do so.
 
 Click on the (1) `New folder` icon, and enter `Week1`
 
-<kbd><img src="images/vs_newfolder.png"></kdb>
+<kbd><img src="../images/vs_newfolder.png"></kdb>
 	
 Click on the (1) `New file` icon, and enter `index.html`
 
-<kbd><img src="images/vs_index.png"></kbd>
+<kbd><img src="../images/vs_index.png"></kbd>
 
 Enter the following code:
 
@@ -77,7 +77,7 @@ Save the file and open it in chrome. Hint: right click on your `index.html` file
 
 Open the Developer tools as shown below (or Ctrl+Shift+I)
 
-<kbd><img src="images/developertools.png"></kbd>
+<kbd><img src="../images/developertools.png"></kbd>
 
 Click on the `console` tab
 
@@ -217,11 +217,11 @@ VS Code comes replete with GitHub features. Let's take full advantage of them.
 1. add a message text for your commit, and
 1. commit your changes by clicking on the checkbox icon.
 
-<kbd><img src="images/vs_commit.png"></kbd>
+<kbd><img src="../images/vs_commit.png"></kbd>
 
 There is one step left. You have just commited your changes to your _local_ repo. You need to **push** your changes to your _online_ GitHub repo. 
 
 1. Click on the "more actions" button (triple dot)
 1. Click on `Push`
 
-<kbd><img src="images/vs_push.png"></kbd>
+<kbd><img src="../images/vs_push.png"></kbd>

@@ -33,18 +33,21 @@ The class will meet once a week, and will consist of a combination of short lect
 
 All assignments, unless otherwise specified, must be posted in the discussion section category for "Assignments" by midnight of the Sunday prior to our class on Monday. Assignments are posted in each week's page, so make sure to read them carefully. 
 
-- Participation, individual progress, coding and reading assignments 10%
-- Group assignments 40%
+- Participation 10%
+- Individual assignments 20%
+- Group assignments 20%
    - There will be four group assignments throughout the quarter. Each assignment will be worth 25% of the total group assignment grade.
 - Mid-term 20%
 - Final report 30%
 
 | Task | Number of items | Points |
 |------|-----------------|--------|
-| Participation and individual assignments | 7 to 10 | 10 points per assignment |
-| Group Assignments | 4 | 400 |
+| Participation | 1 | 100 |
+| Individual assignments | 5 to 7 | 40 points per assignment |
+| Group Assignments | 4 | 50 points per assignment |
 | Mid-term | 1 | 200 |
-| Final project | 1 | 300 |
+| Final project | 1 | 250 |
+
 
 ## Grading criteria
 

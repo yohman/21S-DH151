@@ -5,6 +5,15 @@ Instructor: Yoh Kawano (yohman@gmail.com)
 
 Time: Mondays 2:00 – 4:50pm
 
+# Office Hours
+
+Time: Thusdays 1:00 - 3:00pm
+
+Schedule here:
+- https://calendly.com/yohda/officehours
+
+Or email me to schedule a different day/time
+
 # Pre-class Survey
 
 - Make sure to take [this survey](https://forms.gle/19nZjswKUwJTdZiZA) before class begins
@@ -20,7 +29,7 @@ Or email me to suggest a different date/time.
 
 As a digital humanist, you are at the crossroads of three simple inquiries:  Where did it happen?  When did it happen?  Why did it happen? Space and time are forever interlinked, and the digital revolution has made it such that the visualization of the “spatial” and the “temporal” brings possibilities to interrogate, analyze, reveal, narrate and discover new dimensions that may otherwise remain dormant in its original state. In today’s Internet centered, social media frenzied society, spatial data is becoming one with the web. Twitter, Facebook, TikTok, Google Maps, Leaflet are examples of geospatial technologies centered around the notion that “location,”  “mobility,” and “time” are correlated, and they matter. Humanists are asking new questions, demanding justice from data that did not exist a decade ago, resulting in the creation of compelling web-based mapping applications that are empowering the public to become online cartographers.
 
-The purpose of this course is to implement and examine such web-based technologies. Students will develop the knowledge and skills necessary to plan, design, develop and publish web-based digital mapping solutions. Students will learn how GIS on the internet differs from the desktop experience, and how to prepare spatial information for the web. Although no prior programming experience is required, the course is specifically designed to bring out the “coder” in the “non-coder,” and will teach the basics of internet programming languages. Different web technologies will be explored, including WordPress as a content management platform, Google Maps API, Leaflet Javascript API, and MySQL databases.
+The purpose of this course is to implement and examine such web-based technologies. Students will develop the knowledge and skills necessary to plan, design, develop and publish web-based digital mapping solutions. Students will learn how GIS on the internet differs from the desktop experience, and how to prepare spatial information for the web. Although no prior programming experience is required, the course is specifically designed to bring out the “coder” in the “non-coder,” and will teach the basics of internet programming languages. Different web technologies will be explored, including GitHub, HTML, CSS, Javascript and Leaflet.
 
 It should be noted that the course is primarily a programming class. On top of the web-GIS discussion, we will cover the technical details about web servers and networks that are necessary for a solid and comprehensive understanding of web technologies and web programming in general. Students will be expected to fully code and produce a functioning interactive, database driven mapping website.
 
@@ -47,7 +56,6 @@ All assignments, unless otherwise specified, must be posted in the discussion se
 | Group Assignments | 4 | 50 points per assignment |
 | Mid-term | 1 | 200 |
 | Final project | 1 | 250 |
-
 
 ## Grading criteria
 

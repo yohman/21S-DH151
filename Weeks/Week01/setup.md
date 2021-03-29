@@ -4,6 +4,7 @@ You will need:
 
 1. a GitHub account (you should already have one)
 1. a GitHub repository for the course
+1. enable GitHub Pages
 1. Git installed on your computer (below)
 1. Visual Studio Code installed on your computer (below)
 
@@ -18,6 +19,19 @@ Enter the following information:
 <kbd><img src="images/createrepo.png"></kbd>
 
 Confirm that your repository has been created.
+
+## Enable GitHub Pages
+
+1. In your GitHub class repo (should be something like this: https://github.com/yohman/DH151), go to `Settings`
+2. Scroll down until you see the section for **GitHub Pages**
+1. Choose the `main` branch and save
+
+	<kbd><img src="images/pages.png"></kbd>
+
+1. Scroll down again to the GitHub Pages setting, and take a note of your new "Pages" url:
+
+	<kbd><img src="images/pagesurl.png"></kbd>
+
 
 ## Install Git
 

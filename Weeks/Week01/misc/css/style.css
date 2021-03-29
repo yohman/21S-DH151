@@ -1,0 +1,41 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+#map {
+	height: 100%;
+}
+
+body {
+    display: grid;
+	grid-template-rows: 80px 1fr;
+	grid-template-columns: 350px 1fr;
+	grid-template-areas: 
+	"header header"
+	"sidebar content";
+}
+
+.header {
+	grid-area: header;
+	padding:10px;
+    background-color: #333;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	padding:10px;
+    background-color: #555;
+	overflow: scroll;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidebar-item {
+	margin: 5px;
+	padding: 10px;
+	background-color: whitesmoke;
+}

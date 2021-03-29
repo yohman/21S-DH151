@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leaflet Quick Start Guide Example</title>
+	<title>My Story</title>
 	<meta charset="utf-8" />
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
@@ -16,7 +16,9 @@
 </head>
 <body>
 
-	<div class="header"></div>
+	<div class="header">
+		<img src="images/me.png" width=120>
+	</div>
 	<div class="sidebar"></div>
 	<div class="content">
 
@@ -28,25 +30,42 @@
 			const data = [
 				{
 					'id': 0,
-					'title':'Hello Tokyo',
-					'lat': 35.6762,
-					'lon': 139.6503
+					'title':'Hello Osaka',
+					'lat': 34.6937,
+					'lon': 135.5023,
+					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Osaka_Castle_02bs3200.jpg/320px-Osaka_Castle_02bs3200.jpg'
 				},
 				{
 					'id': 1,
-					'title':'Hello Bangkok',
-					'lat': 13.7563,
-					'lon': 100.5018
+					'title':'Hello Cali',
+					'lat': 3.4516,
+					'lon': -76.5320,
+					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG/320px-Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG'
 				},
 				{
 					'id': 2,
+					'title':'Hello Bangkok',
+					'lat': 13.7563,
+					'lon': 100.5018,
+					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bangkok_skytrain_sunset.jpg/320px-Bangkok_skytrain_sunset.jpg'
+				},
+				{
+					'id': 3,
+					'title':'Hello Tokyo',
+					'lat': 35.6762,
+					'lon': 139.6503,
+					'image':'https://www.stofficetokyo.ch/sites/default/files/styles/featured_image_840x572_/public/2019-01/icu_dronei_34ab_170430-42_r.jpg?itok=mkG94UWD'
+				},
+				{
+					'id': 4,
 					'title':'Hello LA',
 					'lat': 34.0522,
-					'lon': -118.2437
+					'lon': -118.2437,
+					'image':'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UCLA_Royce_Hall.jpg/320px-UCLA_Royce_Hall.jpg'
 				},
 			]
 
-			var map = L.map('map').setView([34,-117], 2);
+			var map = L.map('map').setView([0,0], 2);
 
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -58,10 +77,9 @@
 				// add marker to map
 				L.marker([item.lat,item.lon]).addTo(map)
 					.bindPopup(item.title)
-					.openPopup();	
 
 				// add marker to sidebar
-				$('.sidebar').append('<div class="sidebar-item" onclick="goto('+item.id+')">'+item.title+'</div>')
+				$('.sidebar').append('<div class="sidebar-item" onclick="goto('+item.id+')"><b>'+item.title+'</b><p><img src="'+item.image+'" width=100%></p></div>')
 			})
 			
 			function goto(id){

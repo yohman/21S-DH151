@@ -1,5 +1,5 @@
 # Web GIS: An Introduction to Digital Mapping
-Spring 2021: DH 150
+Spring 2021: DH 151
 
 Instructor: Yoh Kawano (yohman@gmail.com)
 
@@ -17,6 +17,13 @@ Or email me to schedule a different day/time
 # Pre-class Survey
 
 - Make sure to take [this survey](https://forms.gle/19nZjswKUwJTdZiZA) before class begins
+
+# Office hours
+
+Thursdays 1pm-3pm
+- Schedule here: https://calendly.com/yohda/officehours
+
+Or email me to suggest a different date/time.
 
 # Overview
 

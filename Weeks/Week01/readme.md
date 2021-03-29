@@ -4,7 +4,7 @@
 
 - [Class setup](setup.md)
 - [Introduction lecture](https://yohman.github.io/21S-DH151/Weeks/Week01/W01-Lecture.slides.html#/)
-- [Lab 1: Let's make an interactive map](lab/)
+- [Lab 1: Let's make an interactive map](Lab/)
 
 # Assignments
 

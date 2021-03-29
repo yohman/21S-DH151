@@ -225,3 +225,25 @@ There is one step left. You have just commited your changes to your _local_ repo
 1. Click on `Push`
 
 <kbd><img src="../images/vs_push.png"></kbd>
+
+## Bonus: Using the Terminal to push
+
+If you prefer to use the terminal to do your git commands (instead of the GUI interface provided by VS Code), then the following commands will push your changes to your repository.
+
+1. In VS Code's menu bar, go to `Terminal`, `New Terminal`
+1. Check that you are in the right place:
+	```PowerShell
+	git status
+	```
+1. Add modified/new files to your staging area:
+	```PowerShell
+	git add .
+	```
+1. Commit your files with a message:
+	```PowerShell
+	git commit -m "maproom changes"
+	```
+1. Push your changes to your repo:
+	```PowerShell
+	git push
+	```

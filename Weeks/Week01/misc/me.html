@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="header"></div>
+	<div class="sidebar"></div>
+	<div class="content">
+
+		<div id="map"></div>
+
+		<script>
+
+			// let's create some data
+			const data = [
+				{
+					'id': 0,
+					'title':'Hello Osaka',
+					'lat': 34.6937,
+					'lon': 135.5023
+				},
+				{
+					'id': 1,
+					'title':'Hello Cali',
+					'lat': 3.4516,
+					'lon': 76.5320,
+					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG/320px-Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG'
+				},
+				{
+					'id': 2,
+					'title':'Hello Bangkok',
+					'lat': 13.7563,
+					'lon': 100.5018
+				},
+				{
+					'id': 3,
+					'title':'Hello Tokyo',
+					'lat': 35.6762,
+					'lon': 139.6503
+				},
+				{
+					'id': 4,
+					'title':'Hello LA',
+					'lat': 34.0522,
+					'lon': -118.2437
+				},
+			]
+
+			var map = L.map('map').setView([34,-117], 2);
+
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+			
+			// loop through data
+			data.forEach(function(item,index){
+				console.log(item,index)
+				// add marker to map
+				L.marker([item.lat,item.lon]).addTo(map)
+					.bindPopup(item.title)
+					.openPopup();	
+
+				// add marker to sidebar
+				$('.sidebar').append('<div class="sidebar-item" onclick="goto('+item.id+')">'+item.title+'<img src="'+item.image+'" width=250></div>')
+			})
+			
+			function goto(id){
+				console.log(id)
+				map.flyTo([data[id].lat,data[id].lon],10)
+			}
+
+		</script>	
+
+	</div>
+
+</body>
+</html>

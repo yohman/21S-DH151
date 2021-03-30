@@ -119,6 +119,7 @@ Enter the following javascript code (feel free to change the message):
 ```js
 alert('I love Javascript')
 ```
+<kbd><img src="../images/console.png"></kbd>
 
 How about some math:
 
@@ -138,13 +139,121 @@ let data1 = "I am a let variable, the new and cool way to define variables";
 const data2 = "I am a const variable, and you can't change me";
 ```
 
-Variables can do math too!
+
+### Data types
+
+#### Strings
+
+```js
+let s = 'Mapping' // I am a string
+let s2 = 'is fun' // I am also a string
+```
+
+Concatenation
+
+```js
+s + s2
+```
+What's the difference?
+```js
+s + ' ' + s2
+```
+
+Adding to existing strings
+```js
+html = '<h1>My Map</h1>'
+html += '<ul>'
+html += '<li>Osaka</li>'
+html += '<li>Bangkok</li>'
+html += '<li>Tokyo</li>'
+html += '<li>Los Angeles</li>'
+html += '</ul>'
+```
+
+#### Numbers
 
 ```js
 let x = 10;
 let y = 3;
+```
+Variables can do math too!
+```js
 x*y
 ```
 
-Variables 
+#### Arrays
 
+```js
+let a = ['Osaka','Bangkok','Tokyo','Los Angeles']
+```
+How many values (length)?
+```js
+a.length
+```
+Getting specific array values. Note that array count begins with "0" and not "1"
+```js
+a[0]
+a[1]
+a[2]
+a[3]
+```
+#### Objects
+A javascript object is a great way to store a collection of data in `key:value` pairs.
+
+```js
+let city = {
+	'title':'Hello Osaka',
+	'lat': 34.6937,
+	'lon': 135.5023
+},
+```
+#### Objects in Arrays
+By putting objects with identical key:value pairs, we can begin to construct a data table.
+```js
+let data = [
+	{
+		'title':'Hello Osaka',
+		'lat': 34.6937,
+		'lon': 135.5023
+	},
+	{
+		'title':'Hello Cali',
+		'lat': 3.4516,
+		'lon': -76.5320
+	},
+	{
+		'title':'Hello Bangkok',
+		'lat': 13.7563,
+		'lon': 100.5018
+	},
+	{
+		'title':'Hello Tokyo',
+		'lat': 35.6762,
+		'lon': 139.6503
+	},
+	{
+		'title':'Hello LA',
+		'lat': 34.0522,
+		'lon': -118.2437
+	}
+]
+```
+
+### Loops
+Looping allows you to *iterate* through an array.
+
+```js
+// loop through data
+data.forEach(function(item){
+	console.log(item)
+});
+```
+You can choose to return *specific* elements from each data object.
+```js
+// loop through data
+data.forEach(function(item){
+	console.log('The latitude for ' + item.title + ' is ' + item.lat)
+});
+```
+## Mapping an array of data objects
+Now let's put all this knowledge into action. In your `index.html` file, create a data variable

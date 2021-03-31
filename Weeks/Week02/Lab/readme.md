@@ -184,18 +184,18 @@ x*y
 #### Arrays
 
 ```js
-let a = ['Osaka','Bangkok','Tokyo','Los Angeles']
+let cities = ['Osaka','Bangkok','Tokyo','Los Angeles']
 ```
 How many values (length)?
 ```js
-a.length
+cities.length
 ```
 Getting specific array values. Note that array count begins with "0" and not "1"
 ```js
-a[0]
-a[1]
-a[2]
-a[3]
+cities[0]
+cities[1]
+cities[2]
+cities[3]
 ```
 #### Objects
 A javascript object is a great way to store a collection of data in `key:value` pairs.
@@ -243,6 +243,16 @@ let data = [
 
 Looping allows you to *iterate* through an array.
 
+Loop through an array:
+
+```js
+// loop through cities
+cities.forEach(function(item){
+	console.log(item)
+});
+```
+
+Loop through an array of objects:
 ```js
 // loop through data
 data.forEach(function(item){

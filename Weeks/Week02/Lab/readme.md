@@ -33,7 +33,7 @@ If you do not have your Week1 files (you should!), not to worry, you can recreat
 	<body>
 
 		<div class="header">
-			Yoh's World
+			My World
 		</div>
 		<div class="sidebar">
 			My Sidebar
@@ -212,27 +212,27 @@ By putting objects with identical key:value pairs, we can begin to construct a d
 ```js
 let data = [
 	{
-		'title':'Hello Osaka',
+		'title':'Osaka',
 		'lat': 34.6937,
 		'lon': 135.5023
 	},
 	{
-		'title':'Hello Cali',
+		'title':'Cali',
 		'lat': 3.4516,
 		'lon': -76.5320
 	},
 	{
-		'title':'Hello Bangkok',
+		'title':'Bangkok',
 		'lat': 13.7563,
 		'lon': 100.5018
 	},
 	{
-		'title':'Hello Tokyo',
+		'title':'Tokyo',
 		'lat': 35.6762,
 		'lon': 139.6503
 	},
 	{
-		'title':'Hello LA',
+		'title':'LA',
 		'lat': 34.0522,
 		'lon': -118.2437
 	}
@@ -240,6 +240,7 @@ let data = [
 ```
 
 ### Loops
+
 Looping allows you to *iterate* through an array.
 
 ```js
@@ -248,12 +249,23 @@ data.forEach(function(item){
 	console.log(item)
 });
 ```
+
 You can choose to return *specific* elements from each data object.
+
 ```js
 // loop through data
 data.forEach(function(item){
 	console.log('The latitude for ' + item.title + ' is ' + item.lat)
 });
 ```
-## Mapping an array of data objects
-Now let's put all this knowledge into action. In your `index.html` file, create a data variable
+
+## In-class Challenge Exercise
+
+Now it is your turn to put all this newfound javascript knowledge into practice.
+
+1. In your `index.html` file, and in the javascript section of your code (`<script></script>`), create an array of objects that lists locations that you have travelled to (include at least 5 locations). Make sure to include a title, description, latitude, and longitude for each.
+1. Replace the code that generates the single marker with a loop that goes through your array of objects. Then, create a marker for each location. Make sure to include a title and description in the popup.
+1. Add a title of your maproom in the header section.
+1. Add an image and description of your map in the sidebar section.
+1. When you are done, upload your additions to your GitHub Repo.
+1. Add the GitHub Pages URL to your maproom in the class discussion section.

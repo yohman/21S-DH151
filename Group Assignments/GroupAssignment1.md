@@ -1,4 +1,4 @@
-# Group Assignment #1
+# Group Assignment #1 Thick Map Proposal
 
 Your first group assignment is to write a proposal for your group project. 
 

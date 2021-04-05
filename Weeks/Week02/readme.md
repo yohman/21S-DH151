@@ -24,6 +24,10 @@ Today's agenda:
 			- Create new topics if it does not exist
 			- We will go to breakout rooms based on topics as necessary
 
+## Week 2 Lab
+
+- [Data driven narratives](Lab)
+
 # Assignments
 
 ## Group Assignment #1

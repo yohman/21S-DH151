@@ -2,6 +2,7 @@
 
 Today's agenda:
 
+- This session will be recorded
 - Concerns/questions/comments, all welcome!
 - Let's meet! My office hours are Thursdays from 1-3, or by email appointment ([schedule here](https://calendly.com/yohda/officehours))
 

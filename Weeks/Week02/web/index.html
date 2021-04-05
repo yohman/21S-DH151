@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+    <!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		My World
+	</div>
+	<div class="sidebar">
+		My Sidebar
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+	<script>
+		var map = L.map('map').setView([34.0697,-118.4432], 17);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		var marker = L.marker([34.0697,-118.4432]).addTo(map)
+				.bindPopup('The Technology Sandbox<br> Where Yoh is sitting this very moment')
+				.openPopup();	
+
+	</script>
+
+
+</body>
+</html>

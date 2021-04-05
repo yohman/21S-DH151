@@ -51,3 +51,12 @@ When git is installed, check your installation:
 
 - Install the text editor [Visual Studio Code](https://code.visualstudio.com/download)
 
+## Set the Git configuration
+
+Open a terminal window and enter the following with your credentials:
+
+	```PowerShell
+	git config --global user.name "John Doe"
+	git config --global user.email johndoe@example.com
+	```
+	

@@ -299,4 +299,6 @@ Now it is your turn to put all this newfound javascript knowledge into practice.
 1. Add a title of your maproom in the header section.
 1. Add a title and description of your map in the sidebar section.
 1. When you are done, upload your additions to your GitHub Repo ([follow these instructions to commit and push from the week 1 lab](https://github.com/yohman/21S-DH151/tree/main/Weeks/Week01/Lab#push-your-new-files-to-your-github-repo))
-1. Add the GitHub Pages URL to your maproom in the class discussion section
+1. Submit the GitHub Pages URL to your maproom in the class discussion section [here](https://github.com/yohman/21S-DH151/discussions/18)
+
+**Bonus**: Add an image for each city in your narrative.

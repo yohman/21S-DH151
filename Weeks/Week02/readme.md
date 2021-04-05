@@ -27,5 +27,15 @@ Today's agenda:
 # Assignments
 
 ## Group Assignment #1
-- [Instructions here](../../Group Assignments/GroupAssignment1.md)
+- [Instructions here](https://github.com/yohman/21S-DH151/blob/staging/Group%20Assignments/GroupAssignment1.md)
 
+## Individual Assignment
+
+Complete the in-class lab, making sure it has the following elements:
+
+- A fully functional interactive map
+- "Data" driven narrative, using a javascript object with key:value pairs that generate the markers and narratives on the map
+
+## Reading assignment:
+
+Read [Javascript Basics](https://geobgu.xyz/web-mapping2/javascript-basics.html). 

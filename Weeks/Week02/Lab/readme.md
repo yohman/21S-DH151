@@ -112,6 +112,8 @@ In your Chrome browser, you should now see your index.html file with a fully int
 
 When loading a web page which is associated with one or more scripts, the JavaScript code is automatically interpreted and executed by the browser. We can also manually interact with the browser’s interpreter or engine using the JavaScript console, also known as the command line, which is built into all modern web browsers. The console is basically a way to type code into a computer and get the computer’s answer back. This is useful for experimenting with JavaScript code, such as quickly testing short JavaScript code snippets. It is exactly what we are going to do.
 
+## Developer's tools
+
 Open the developer's tools (ctrl-shift-i) and select the console tab.
 
 Enter the following javascript code (feel free to change the message):
@@ -134,30 +136,29 @@ How about some math:
 Variables can be declared in three ways.
 
 ```js
-var data0 = "I am a var variable, and I am old school";
-let data1 = "I am a let variable, the new and cool way to define variables";
-const data2 = "I am a const variable, and you can't change me";
+var d1 = "I am a var variable, and I am old school";
+let d2 = "I am a let variable, the new and cool way to define variables";
+const d3 = "I am a const variable, and you can't change me";
 ```
 
 
 ### Data types
 
-#### Strings
+#### Strings: Single or double quotes
 
 ```js
-let s = 'Mapping' // I am a string
+let s1 = 'Mapping' // I am a string
 let s2 = 'is fun' // I am also a string
 ```
 
 Concatenation
 
 ```js
-s + s2
+s1 + s2
 ```
-What's the difference?
-```js
-s + ' ' + s2
-```
+
+> This results in `Mappingis fun`. How do you fix the sentence?
+
 
 Adding to existing strings
 ```js
@@ -181,7 +182,10 @@ Variables can do math too!
 x*y
 ```
 
-#### Arrays
+> Question: What happens when you add a string to a number? (ex. `s1 + x`)
+
+
+#### Arrays: Square brackets `[]`
 
 ```js
 let cities = ['Osaka','Bangkok','Tokyo','Los Angeles']
@@ -197,7 +201,7 @@ cities[1]
 cities[2]
 cities[3]
 ```
-#### Objects
+#### Objects: Squiggly brackets `{}`
 A javascript object is a great way to store a collection of data in `key:value` pairs.
 
 ```js
@@ -205,8 +209,16 @@ let city = {
 	'title':'Hello Osaka',
 	'lat': 34.6937,
 	'lon': 135.5023
-},
+};
 ```
+
+Grab "values" by requesting its key:
+
+```js
+city.title
+```
+
+
 #### Objects in Arrays
 By putting objects with identical key:value pairs, we can begin to construct a data table.
 ```js
@@ -239,6 +251,10 @@ let data = [
 ]
 ```
 
+Challenge questions:
+1. How do you get specific array objects?
+1. Get the latitude coordinate for Tokyo using javascript code
+
 ### Loops
 
 Looping allows you to *iterate* through an array.
@@ -268,14 +284,19 @@ data.forEach(function(item){
 	console.log('The latitude for ' + item.title + ' is ' + item.lat)
 });
 ```
+Challenge exercise:
+1. Add a `description` key to the data array objects, and enter a sentence per city.
+1. Loop through each data object, and create the following statement for each city: 
 
-## In-class Challenge Exercise
+`The coordinates for _city_ are _lat_, _lon_. _City_ is _description_.`
+
+## In-class Exercise (also your individual assignment)
 
 Now it is your turn to put all this newfound javascript knowledge into practice.
 
 1. In your `index.html` file, and in the javascript section of your code (`<script></script>`), create an array of objects that lists locations that you have travelled to (include at least 5 locations). Make sure to include a title, description, latitude, and longitude for each.
 1. Replace the code that generates the single marker with a loop that goes through your array of objects. Then, create a marker for each location. Make sure to include a title and description in the popup.
 1. Add a title of your maproom in the header section.
-1. Add an image and description of your map in the sidebar section.
-1. When you are done, upload your additions to your GitHub Repo.
-1. Add the GitHub Pages URL to your maproom in the class discussion section.
+1. Add a title and description of your map in the sidebar section.
+1. When you are done, upload your additions to your GitHub Repo ([follow these instructions to commit and push from the week 1 lab](https://github.com/yohman/21S-DH151/tree/main/Weeks/Week01/Lab#push-your-new-files-to-your-github-repo))
+1. Add the GitHub Pages URL to your maproom in the class discussion section

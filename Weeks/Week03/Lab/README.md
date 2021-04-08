@@ -23,6 +23,22 @@ To begin, copy the maproom files you created from your Week 2 lab into a Week3 f
 1. Copy and paste your `Week2` folder, and rename `Week2 copy` to `Week3`
 1. Alternatively, create a `Week3` folder, and copy and paste the files from [here](starter/).
 
+## Moving javascript to its own
+
+Your javascript has grown up. It is time to let it go and live on its own. In your `Week3` folder, create a `js` folder, and create a file `map.js`.
+
+<kbd><img src="images/files.png"></kbd>
+
+Cut all the javascript code that resides inside the `<script></script>` tags, *without* the `script` tags.
+
+Next, in the `index.html` file, replace the now empty `<script></script>` tags with the following:
+
+```js
+<!-- map javascript -->
+<script src="js/map.js"></script>
+```
+
+
 ### Add jQuery
 What is [jQuery](https://jquery.com/)?
 jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
@@ -36,8 +52,8 @@ Add jQuery using the CDN (link provided [here](https://code.jquery.com/)) to the
 
 ### Selecting elements
 jQuery makes it easy to select elements (like a `<div>`) and do *something* with it. Let's experiment using your browser's developer tools.
-1. Open `Week3/index.html` in a chrome browser
-1. Access the developer tools (ctrl/command+shift+i)
+1. Open `Week3/index.html` in a chrome browser (if you installed the "Live Server" extension, you can click on the "Go Live" button)
+1. Access the developer tools (ctrl/command+shift+i), and select the console tab
 
 #### Selecting elements by class name
 
@@ -95,6 +111,8 @@ $('#map').fadeIn(2000)
 > **NOTE**: Remember, `.` for classes, and `#` for ids. This notation is the same for stylesheet declarations, which we will cover later.
 
 ### Adding dynamic content to the sidebar
+
+<kbd><img src="images/sidebar.png"></kbd>
 
 So how is all this useful for our maproom? While we learned how to add markers from an array of objects, we can use the same logic to add content to the sidebar.
 
@@ -224,6 +242,9 @@ Next, let's create a function that *flies to* a location in our data by feeding 
 // function to fly to a location by a given id number
 function flyByID(id){
 	map.flyTo([data[id].lat,data[id].lon],12)
+
+	// open the popup
+	myMarkers.getLayers()[id].openPopup()
 }
 ```
 
@@ -272,6 +293,25 @@ Finally, the added benefit of putting markers in a `featureGroup` is that it all
 ```js
 // make the map zoom to the extent of markers
 map.fitBounds(myMarkers.getBounds());
+```
+## Add a layer toggle box
+
+<kbd><img src="images/layer.png"></kbd>
+
+Leaflet also comes with a nice feature that allows you to control your layers. While we only have one feature group to control, let's add it anyways. First, create an object of your layer:
+
+```js
+// define layers
+let layers = {
+	"My Markers": myMarkers
+}
+```
+
+Then, add the control to the map:
+
+```js
+// add layer control box
+L.control.layers(null,layers).addTo(map)
 ```
 
 

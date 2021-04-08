@@ -239,20 +239,56 @@ data.forEach(function(item){
 })
 ```
 
+## Using a `featureGroup` for your markers
+
+Currently, we are mapping each marker, one at a time. Since our markers are part of a collection, it is adviced to put them in a leaflet `featureGroup`.
+
+```js
+// before looping the data, create an empty FeatureGroup
+let myMarkers = L.featureGroup();
+
+// loop through data
+data.forEach(function(item){
+	// create marker
+	marker = L.marker([item.lat,item.lon]).bindPopup(item.title)
+
+	// add marker to featuregroup
+	myMarkers.addLayer(marker)
+
+	// add data to sidebar with onclick event
+	$('.sidebar').append('<div class="sidebar-item" onclick="flyByID('+item.id+')">'+item.title+'</div>')
+})
+
+// after loop, add the FeatureGroup to map
+myMarkers.addTo(map)
+```
+
+## Zoom to the extent of your markers
+
+Finally, the added benefit of putting markers in a `featureGroup` is that it allows you to fit the map view to the bounds of your markers with one line of code:
+
+```js
+// make the map zoom to the extent of markers
+map.fitBounds(myMarkers.getBounds());
+```
+
+
 ## Cleanup work
 
-### Default to the extent of markers
-
 ### CSS cleanup
+
+`overlow: auto` makes the element scrollable with a scrollbar
 
 ```css
 .sidebar {
 	grid-area: sidebar;
 	padding:10px;
 	background-color: #555;
-	overflow: auto;
+	overflow: auto; /* allows the sidebar to overflow with a scrollbar */
 }
 ```
+
+`cursor: pointer` makes the cursor style change when hovering over the element
 
 ```css
 .sidebar-item {
@@ -261,5 +297,44 @@ data.forEach(function(item){
     border: 1px solid gray; /* border width and color */
     margin: 5px; /* outer padding */
 	cursor: pointer; /* change cursor to hand on hover */
+}
+```
+Simple layout changes can be made
+
+`grid-template-columns` can be modified to your liking. Note that the `1fr` indicates the remainder of the space allocated. Here are some examples:
+
+#### 400px split
+```css
+body {
+	display: grid;
+	grid-template-rows: 80px 1fr;
+	grid-template-columns: 400px 1fr; /* change to 50/50 split */
+	grid-template-areas: 
+	"header header"
+	"sidebar content";
+}
+```
+
+#### 50/50 split and a taller header
+```css
+body {
+	display: grid;
+	grid-template-rows: 120px 1fr;
+	grid-template-columns: 50% 50%; /* change to 50/50 split */
+	grid-template-areas: 
+	"header header"
+	"sidebar content";
+}
+```
+
+#### 50/50 split and the sidebar on the right
+```css
+body {
+	display: grid;
+	grid-template-rows: 120px 1fr;
+	grid-template-columns: 50% 50%; /* change to 50/50 split */
+	grid-template-areas: 
+	"header header"
+	"content sidebar";
 }
 ```

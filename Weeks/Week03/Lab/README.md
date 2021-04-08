@@ -2,12 +2,26 @@
 
 ## Getting started
 
+### Install Live Server
+
+Live Server is a great VSCode extension that allows you to see your html code on a local browser window.
+
+1. Click on the extensions tab
+1. Enter "live server" in the search box
+1. Click on the install button next to Live Server
+
+<kbd><img src="images/live.png"></kbd>
+
+Once installed, open an .html file, and click on the "go live" button.
+
+<kbd><img src="images/golive.png">
+
+## Starter files
+
 To begin, copy the maproom files you created from your Week 2 lab into a Week3 folder.
 
-1. Open VSCode and make sure you have your `DH151` repository open
-1. Create a `Week3` folder
-1. Copy your `Week2/index.html` file and the `Week2/css` folder to your `Week3` folder
-1. Open the `Week3/index.html` file
+1. Copy and paste your `Week2` folder, and rename `Week2 copy` to `Week3`
+1. Alternatively, create a `Week3` folder, and copy and paste the files from [here](/starter/).
 
 ### Add jQuery
 What is [jQuery](https://jquery.com/)?

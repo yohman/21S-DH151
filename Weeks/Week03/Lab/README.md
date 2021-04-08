@@ -9,18 +9,6 @@ To begin, copy the maproom files you created from your Week 2 lab into a Week3 f
 1. Copy your `Week2/index.html` file and the `Week2/css` folder to your `Week3` folder
 1. Open the `Week3/index.html` file
 
-
-## Additional map functions
-### Changing basemaps
-
-### Changing markers
-
-### Using circles
-
-### Map events
-
-## jQuery
-
 ### Add jQuery
 What is [jQuery](https://jquery.com/)?
 jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
@@ -151,7 +139,7 @@ Refresh your page in your browser to see your new css style applied to the sideb
 
 ## Adding an ID key
 
-In order to be able to easily identify each element in our data, we need to create a unique ID field.
+In order to easily identify each element in our data, create a unique ID field.
 
 Modify the data objects and add an `id` key with unique identifyers:
 
@@ -299,7 +287,10 @@ map.fitBounds(myMarkers.getBounds());
 	cursor: pointer; /* change cursor to hand on hover */
 }
 ```
-Simple layout changes can be made
+
+### Layout
+
+Simple layout changes can be made as well
 
 `grid-template-columns` can be modified to your liking. Note that the `1fr` indicates the remainder of the space allocated. Here are some examples:
 
@@ -327,7 +318,7 @@ body {
 }
 ```
 
-#### 50/50 split and the sidebar on the right
+#### 50/50 split, a tall header, and the sidebar on the right
 ```css
 body {
 	display: grid;
@@ -335,6 +326,6 @@ body {
 	grid-template-columns: 50% 50%; /* change to 50/50 split */
 	grid-template-areas: 
 	"header header"
-	"content sidebar";
+	"content sidebar"; /* swapped places */
 }
 ```

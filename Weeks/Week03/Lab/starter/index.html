@@ -80,7 +80,7 @@
 
 		// loop through data
 		data.forEach(function(item){
-			var marker = L.marker([item.lat,item.lon]).addTo(map)
+			L.marker([item.lat,item.lon]).addTo(map)
 				.bindPopup(item.title)
 		});
 

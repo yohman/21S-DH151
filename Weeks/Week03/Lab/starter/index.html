@@ -70,20 +70,17 @@
 			},
 		]
 
-
-		var map = L.map('map').setView([0,0], 3);
+		let map = L.map('map').setView([0,0], 3);
 
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 
-
 		// loop through data
 		data.forEach(function(item){
-			L.marker([item.lat,item.lon]).addTo(map)
+			let marker = L.marker([item.lat,item.lon]).addTo(map)
 				.bindPopup(item.title)
 		});
-
 
 	</script>
 

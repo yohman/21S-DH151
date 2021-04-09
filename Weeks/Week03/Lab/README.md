@@ -29,7 +29,7 @@ Your javascript has grown up. It is time to let it go and live on its own. In yo
 
 <kbd><img src="images/files.png"></kbd>
 
-Cut all the javascript code that resides inside the `<script></script>` tags, *without* the `script` tags.
+Cut and paste all the javascript code that resides inside the `<script></script>` tags, *without* the `script` tags, and paste it into your new `map.js` file. Indent as necessary.
 
 Next, in the `index.html` file, replace the now empty `<script></script>` tags with the following:
 
@@ -37,13 +37,24 @@ Next, in the `index.html` file, replace the now empty `<script></script>` tags w
 <!-- map javascript -->
 <script src="js/map.js"></script>
 ```
+Your `index.html` file should now have no javascript in it, and only have about 35 lines of html code in it.
 
+Your web file structure should now be:
+
+```
++-- Week3
+    +-- css
+	    +-- style.css
+	+-- js
+		+-- map.js
+	index.html
+```
 
 ### Add jQuery
 What is [jQuery](https://jquery.com/)?
-jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+> jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
 
-Add jQuery using the CDN (link provided [here](https://code.jquery.com/)) to the `<head></head>` area of your `index.html` file.
+Add jQuery (v3.6.0 at the time of this writing) using the CDN (link provided [here](https://code.jquery.com/)) to the `<head></head>` area of your `index.html` file.
 
 ```html
 <!-- jquery -->
@@ -122,7 +133,7 @@ If you were successful in your Week 2 lab, you should have a loop in your code t
 // loop through data
 data.forEach(function(item){
 	// add marker to map
-	L.marker([item.lat,item.lon]).addTo(map)
+	let marker = L.marker([item.lat,item.lon]).addTo(map)
 		.bindPopup(item.title)
 })
 ```
@@ -133,7 +144,7 @@ You can use this same loop to add content to the sidebar:
 // loop through data
 data.forEach(function(item){
 	// add marker to map
-	L.marker([item.lat,item.lon]).addTo(map)
+	let marker = L.marker([item.lat,item.lon]).addTo(map)
 		.bindPopup(item.title)
 
 	// add data to sidebar
@@ -148,7 +159,7 @@ Let's create a "card" like style for each item in the sidebar. To do so, wrap th
 // loop through data
 data.forEach(function(item){
 	// add marker to map
-	L.marker([item.lat,item.lon]).addTo(map)
+	let marker = L.marker([item.lat,item.lon]).addTo(map)
 		.bindPopup(item.title)
 
 	// add data to sidebar
@@ -171,7 +182,7 @@ Refresh your page in your browser to see your new css style applied to the sideb
 
 ## Adding an ID key
 
-In order to easily identify each element in our data, create a unique ID field.
+In order to easily identify each element in the data, create a unique ID field.
 
 Modify the data objects and add an `id` key with unique identifyers:
 

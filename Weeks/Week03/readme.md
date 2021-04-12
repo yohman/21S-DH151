@@ -38,6 +38,12 @@ Environmental Racism in Carceral California | Frida Barragan & Kate McInerny | [
 cARTographers | Kai Colorado & Alex Haddad | [proposal](https://github.com/kaicolorado/DH151-Group/blob/main/Proposal.md)
 State-of-the-Arts | Natasha Grace, Zona Liao and Alekhya Vittalam | [proposal](https://github.com/alekhyavittalam/state-of-the-arts/blob/main/Assignment1.md)
 
+### Group collaborative coding extension
+
+Install the Live Share extension to VSCode
+
+- https://code.visualstudio.com/learn/collaboration/live-share
+
 ### Week 3 Lab
 
 - [Story Map Finale](Lab)
@@ -48,7 +54,7 @@ State-of-the-Arts | Natasha Grace, Zona Liao and Alekhya Vittalam | [proposal](h
 
 What is UX design?
 
-Read the following article ["Introduction to UXD"](https://medium.com/beakerandflint/an-introduction-user-experience-design-2a7f8167bf03) and write a short reaction piece to it.
+Read the following article ["Introduction to UXD"](https://medium.com/beakerandflint/an-introduction-user-experience-design-2a7f8167bf03) and watch the following video ["what is user experience design?"](https://www.youtube.com/watch?v=Nj6x01wg2WA). Write a short reaction piece directly into the discussion submission link below.
 
 Additionally, submit one or two questions for our guest speaker next week, [Alesha Unpingco](https://ace.alumni.ucla.edu/alesha-unpingco/).
 

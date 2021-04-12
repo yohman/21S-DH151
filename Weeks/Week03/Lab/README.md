@@ -39,16 +39,6 @@ Next, in the `index.html` file, replace the now empty `<script></script>` tags w
 ```
 Your `index.html` file should now have no javascript in it, and only have about 35 lines of html code in it.
 
-Your web file structure should now be:
-
-```
-+-- Week3
-	+-- css
-		+-- style.css
-	+-- js
-		+-- map.js
-	index.html
-```
 
 ### Add jQuery
 What is [jQuery](https://jquery.com/)?
@@ -202,42 +192,6 @@ Add the following css in your `Week3/css/style.css` file:
 ```
 Refresh your page in your browser to see your new css style applied to the sidebar elements. Take some time to adjust the css components to match your site design and layout.
 
-## Adding an ID key
-
-In order to easily identify each element in the data, create a unique ID field.
-
-Modify the data objects and add an `id` key with unique identifyers:
-
-```js
-
-// let's create some data
-let data = [
-	{
-		'id': 0,
-		'title':'Osaka',
-		'lat': 34.6937,
-		'lon': 135.5023,
-		'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Osaka_Castle_02bs3200.jpg/320px-Osaka_Castle_02bs3200.jpg'
-	},
-	{
-		'id': 1,
-		'title':'Cali',
-		'lat': 3.4516,
-		'lon': -76.5320,
-		'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG/320px-Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG'
-	},
-	etc...
-]
-```
-
-Now we know that we can access different objects in our data array in the following way:
-
-```js
-// to get the lat/lon for the first location
-data[0].lat
-data[0].lon
-```
-
 ## On click events
 
 The HTML `onclick` attribute allows you to assign an action to an element (like a `<div>`). Take a look at the loop that generated the cards in the sidebar, and add the following onclick event to each `<div>` in the loop `onclick=alert("you clicked me!")`.
@@ -273,31 +227,30 @@ Next, let's create a function that *flies to* a location in our data by feeding 
 
 ```js
 // function to fly to a location by a given id number
-function flyByID(id){
-	map.flyTo([data[id].lat,data[id].lon],12)
-
-	// open the popup
-	myMarkers.getLayers()[id].openPopup()
+function flyToIndex(index){
+	map.flyTo([data[index].lat,data[index].lon],12)
 }
 ```
 
-Now we need to activate this function as on `onclick` event from the sidebar. To do so, add the event to the code that generates the div in the sidebar:
+Now we need to activate this function as on `onclick` event from the sidebar. To do so, add the event to the code that generates the div in the sidebar. 
+
+First, add another parameter in the `forEach()` loop for `index` which specifies the array index of your loop.
 
 ```js
 // loop through data
-data.forEach(function(item){
+data.forEach(function(item,index){
 	// add marker to map
 	L.marker([item.lat,item.lon]).addTo(map)
 		.bindPopup(item.title)
 
 	// add data to sidebar with onclick event
-	$('.sidebar').append(`<div class="sidebar-item" onclick="flyByID(${item.id})">${item.title}</div>`)
+	$('.sidebar').append(`<div class="sidebar-item" onclick="flyToIndex(${index})">${item.title}</div>`)
 })
 ```
 
 ## Using a `featureGroup` for your markers
 
-Currently, we are mapping each marker, one at a time. Since our markers are part of a collection, it is adviced to put them in a leaflet `featureGroup`.
+Currently, we are mapping each marker, one at a time. Since our markers are part of a collection, it is adviced to put them in a leaflet `featureGroup` [link](https://leafletjs.com/reference-1.7.1.html#featuregroup).
 
 ```js
 // before looping the data, create an empty FeatureGroup
@@ -306,7 +259,7 @@ let myMarkers = L.featureGroup();
 // loop through data
 data.forEach(function(item){
 	// create marker
-	marker = L.marker([item.lat,item.lon]).bindPopup(item.title)
+	let marker = L.marker([item.lat,item.lon]).bindPopup(item.title)
 
 	// add marker to featuregroup
 	myMarkers.addLayer(marker)
@@ -318,16 +271,7 @@ data.forEach(function(item){
 // after loop, add the FeatureGroup to map
 myMarkers.addTo(map)
 ```
-
-## Zoom to the extent of your markers
-
-Finally, the added benefit of putting markers in a `featureGroup` is that it allows you to fit the map view to the bounds of your markers with one line of code:
-
-```js
-// make the map zoom to the extent of markers
-map.fitBounds(myMarkers.getBounds());
-```
-## Add a layer toggle box
+### Add a layer toggle box
 
 <kbd><img src="images/layer.png"></kbd>
 
@@ -345,6 +289,28 @@ Then, add the control to the map:
 ```js
 // add layer control box
 L.control.layers(null,layers).addTo(map)
+```
+
+### Open popup when "flown" to
+
+```js
+// function to fly to a location by a given id number
+function flyByIndex(index){
+	map.flyTo([data[index].lat,data[index].lon],12)
+
+	// open the popup
+	myMarkers.getLayers()[index].openPopup()
+}
+```
+
+
+## Zoom to the extent of your markers
+
+Finally, the added benefit of putting markers in a `featureGroup` is that it allows you to fit the map view to the bounds of your markers with one line of code:
+
+```js
+// make the map zoom to the extent of markers
+map.fitBounds(myMarkers.getBounds());
 ```
 
 

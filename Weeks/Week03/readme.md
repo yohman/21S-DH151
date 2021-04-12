@@ -54,7 +54,7 @@ Install the Live Share extension to VSCode
 
 What is UX design?
 
-Read the following article ["Introduction to UXD"](https://medium.com/beakerandflint/an-introduction-user-experience-design-2a7f8167bf03) and write a short reaction piece to it.
+Read the following article ["Introduction to UXD"](https://medium.com/beakerandflint/an-introduction-user-experience-design-2a7f8167bf03) and watch the following video ["what is user experience design?"](https://www.youtube.com/watch?v=Nj6x01wg2WA). Write a short reaction piece directly into the discussion submission link below.
 
 Additionally, submit one or two questions for our guest speaker next week, [Alesha Unpingco](https://ace.alumni.ucla.edu/alesha-unpingco/).
 

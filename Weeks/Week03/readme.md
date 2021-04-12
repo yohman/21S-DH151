@@ -11,9 +11,17 @@
 - [Map links](https://github.com/yohman/21S-DH151/discussions/18)
 - Breakout groups (20 minutes)
 	- Introductions: get to know one another!
-	- Take turns to show off your maproom's
-	- Discuss challenges in creating your website
-- Maproom honorable mentions
+	- Take turns to show off your maproom
+	- Discuss challenges in creating your website, what other functionalities would make it "better"
+
+### Maproom honorable mentions
+
+who | link 
+--- | ---
+<img src="https://avatars.githubusercontent.com/u/43893062?s=60&v=4" width=50> | [Ivan's dynamic sidebar](https://ivanma9.github.io/DH151/Week2/)
+<img src="https://avatars.githubusercontent.com/u/81273017?s=60&v=4" width=50> | [Eli's image markers](https://eliaranita1.github.io/DH151/week%202/index.html)
+<img src="https://avatars.githubusercontent.com/u/7450208?s=60&v=4" width=50> | [Alex's template literal](https://alexthegreat1.github.io/DH151/Week%202/index.html)
+<img src="https://avatars.githubusercontent.com/u/77029932?s=60&v=4" width=50> | [Frida's history lesson](https://frida-barragan.github.io/DH151/Week2/index.html)
 
 ### Groups
 
@@ -39,6 +47,12 @@ State-of-the-Arts | Natasha Grace, Zona Liao and Alekhya Vittalam | [proposal](h
 ## Thinking Cap
 
 What is UX design?
+
+Read the following article ["Introduction to UXD"](https://medium.com/beakerandflint/an-introduction-user-experience-design-2a7f8167bf03) and write a short reaction piece to it.
+
+Additionally, submit one or two questions for our guest speaker next week, [Alesha Unpingco](https://ace.alumni.ucla.edu/alesha-unpingco/).
+
+<img src="https://ace.alumni.ucla.edu/wp-content/uploads/2019/02/Alesha-Unpingco-500x500-300x300.png" width=200>
 
 - Submit your assignment [here](https://github.com/yohman/21S-DH151/discussions/26)
 

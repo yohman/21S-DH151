@@ -166,6 +166,28 @@ data.forEach(function(item){
 	$('.sidebar').append('<div class="sidebar-item">'+item.title+'</div>')
 })
 ```
+
+### Introducing Template Literals
+
+But wait, there is a different and recommended approach to concatenating html strings with variable strings. It is called ["Template Literals"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (thanks Alex!).
+
+Instead of the following:
+
+```js
+// add data to sidebar
+$('.sidebar').append('<div class="sidebar-item">'+item.title+'</div>')
+```
+Use the following syntax:
+
+```js
+// add data to sidebar
+$('.sidebar').append(`<div class="sidebar-item">${item.title}</div>`)
+```
+
+No more `+` signs and intermittent single/double quotes!
+
+### Create new css entry
+
 Next, we need to create a css entry in our stylesheet to style our divs with class `sidebar-item`.
 
 Add the following css in your `Week3/css/style.css` file:
@@ -228,7 +250,7 @@ data.forEach(function(item){
 		.bindPopup(item.title)
 
 	// add data to sidebar
-	$('.sidebar').append('<div class="sidebar-item" onclick="alert(\"you clicked me!\")">'+item.title+'</div>')
+	$('.sidebar').append(`<div class="sidebar-item" onclick="alert('you clicked me!')">${item.title}</div>`)
 })
 ```
 
@@ -269,7 +291,7 @@ data.forEach(function(item){
 		.bindPopup(item.title)
 
 	// add data to sidebar with onclick event
-	$('.sidebar').append('<div class="sidebar-item" onclick="flyByID('+item.id+')">'+item.title+'</div>')
+	$('.sidebar').append(`<div class="sidebar-item" onclick="flyByID(${item.id})">${item.title}</div>`)
 })
 ```
 
@@ -290,7 +312,7 @@ data.forEach(function(item){
 	myMarkers.addLayer(marker)
 
 	// add data to sidebar with onclick event
-	$('.sidebar').append('<div class="sidebar-item" onclick="flyByID('+item.id+')">'+item.title+'</div>')
+	$('.sidebar').append(`<div class="sidebar-item" onclick="flyByID(${item.id})">${item.title}</div>`)
 })
 
 // after loop, add the FeatureGroup to map

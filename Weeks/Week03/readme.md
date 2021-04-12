@@ -38,6 +38,12 @@ Environmental Racism in Carceral California | Frida Barragan & Kate McInerny | [
 cARTographers | Kai Colorado & Alex Haddad | [proposal](https://github.com/kaicolorado/DH151-Group/blob/main/Proposal.md)
 State-of-the-Arts | Natasha Grace, Zona Liao and Alekhya Vittalam | [proposal](https://github.com/alekhyavittalam/state-of-the-arts/blob/main/Assignment1.md)
 
+### Group collaborative coding extension
+
+Install the Live Share extension to VSCode
+
+- https://code.visualstudio.com/learn/collaboration/live-share
+
 ### Week 3 Lab
 
 - [Story Map Finale](Lab)

@@ -43,8 +43,8 @@ Your web file structure should now be:
 
 ```
 +-- Week3
-    +-- css
-	    +-- style.css
+	+-- css
+		+-- style.css
 	+-- js
 		+-- map.js
 	index.html

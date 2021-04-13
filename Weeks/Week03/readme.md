@@ -34,7 +34,8 @@ Fantastic Four | Labiba Alam, Haiqi Zhou, Adriana Romero, and Lynn Tieu | [propo
 Rethink Recycling | Alice Lu, Emily Chau, and Hozumi Oshida | [proposal](https://github.com/hoz-map/Rethink-Recycling#readme)
 Ocean Pollution Posse | Julia Wood, Eli Aranita, Derek Wang | [proposal](https://github.com/eliaranita1/project1/blob/main/ProjectProposal.md)
 Team Data | Ainsleigh Douglas, Sebastien Dills, Ryan Orlando | [proposal](https://github.com/ryanorlando/DH151-Project/blob/main/Assignment1.md)
-Environmental Racism in Carceral California | Frida Barragan & Kate McInerny | [proposal](https://github.com/frida-barragan/DH151_Group/blob/main/Proposal.md)
+Environmental Racism in Carceral California | Hannah Lien, Julia Tanenbaum, Lisa Kahn | [proposal](https://github.com/jmtanenbaum/DHEnviroIncarceration/blob/main/README.md)
+The Health Mappers | Frida Barragan & Kate McInerny | [proposal](https://github.com/frida-barragan/DH151_Group/blob/main/Proposal.md)
 cARTographers | Kai Colorado & Alex Haddad | [proposal](https://github.com/kaicolorado/DH151-Group/blob/main/Proposal.md)
 State-of-the-Arts | Natasha Grace, Zona Liao and Alekhya Vittalam | [proposal](https://github.com/alekhyavittalam/state-of-the-arts/blob/main/Assignment1.md)
 

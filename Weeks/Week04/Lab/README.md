@@ -73,3 +73,26 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 ```
+
+### Changing markers to circles
+
+- [CircleMarker](https://leafletjs.com/reference-1.7.1.html#circlemarker)
+
+```js
+function mapCSV(data){
+	let markers = L.featureGroup();
+	data.data.forEach(function(item){
+		let circleOptions = {
+			radius: 5,
+			weight: 1,
+			color: white,
+			fillColor: red
+		}
+		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
+		markers.addLayer(marker)
+	})
+	markers.addTo(map)
+	map.fitBounds(markers.getBounds())
+}
+```
+

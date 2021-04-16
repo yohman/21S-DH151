@@ -126,7 +126,7 @@ function mapCSV(data){
 
 ## Part 1: Mindmap (5 minutes)
 
-You have identified a problem, written up a proposal, identified preliminary datasets, and introduced a methodology for your project.
+You have identified a problem, written up a proposal, selected preliminary datasets, and introduced a methodology for your project.
 
 Begin to visualize the different components of the user experience: the user, the web interface, the interactions, the workflow, the navigation, and the end result. This is an individual exercise. With paper and pen, sketch the user experience as best as you can. No mind map will be the same. Some may be all images, all text, diagrams, arrows, illustrations, it's all good.
 

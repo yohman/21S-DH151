@@ -38,7 +38,18 @@ function readCSV(path){
 function mapCSV(data){
 	let markers = L.featureGroup();
 	data.data.forEach(function(item){
-		let marker = L.marker([item.latitude,item.longitude])
+		let circleOptions = {
+			radius: 6,
+			weight: 1,
+			color: 'white',
+			opacity: 0.8,
+			fillColor: 'dodgerblue',
+			fillOpacity: 1
+		}
+		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
+		.on('mouseover',function(){
+			this.bindPopup(`${item.title}<br><img src="${item.thumbnail_url}">`).openPopup()
+		})
 		markers.addLayer(marker)
 	})
 	markers.addTo(map)

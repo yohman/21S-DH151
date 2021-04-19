@@ -7,6 +7,8 @@ It is time to narrow down on your datasets. Submit a data plan that includes the
 - List all datasets (with links) that you intend to use in your project
 - Include a short description no how the data will be used (ex. "Data will be downloaded as a csv file from _link_ and geocoded using Python. Each category of data by _fieldname_ will be a separate layer on the map assigned with a different color icon, and toggles will allow users to turn them on/off. Narratives will be driven by combining _fieldnames_ and be available as a popup box as users hover over individual icons.")
 
+Submit your data plan [here](https://github.com/yohman/21S-DH151/discussions/35)
+
 ## Part 2: UX Design
 
 <img src="../Weeks/Week04/images/nkca1.png">

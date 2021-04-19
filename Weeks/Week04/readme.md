@@ -18,10 +18,13 @@
 
 who | link 
 --- | ---
-<img src="https://avatars.githubusercontent.com/u/43893062?s=60&v=4" width=50> | [Ivan's dynamic sidebar](https://ivanma9.github.io/DH151/Week2/)
-<img src="https://avatars.githubusercontent.com/u/81273017?s=60&v=4" width=50> | [Eli's image markers](https://eliaranita1.github.io/DH151/week%202/index.html)
-<img src="https://avatars.githubusercontent.com/u/7450208?s=60&v=4" width=50> | [Alex's template literal](https://alexthegreat1.github.io/DH151/Week%202/index.html)
-<img src="https://avatars.githubusercontent.com/u/77029932?s=60&v=4" width=50> | [Frida's history lesson](https://frida-barragan.github.io/DH151/Week2/index.html)
+<img src="https://avatars.githubusercontent.com/u/54642556?s=120&v=4" width=50> | [Eutina's show and hide](https://kimjee8955.github.io/DH151/Week3/index.html)
+<img src="https://avatars.githubusercontent.com/u/62718306?s=120&v=4" width=50> | [Alice lines up](https://alicelu170.github.io/DH151/Week%203/index.html)
+<img src="https://avatars.githubusercontent.com/u/45404012?s=60&v=4" width=50> | [Ann's fonts and shadows](https://anncong.github.io/DH151/Week3/Index.html)
+<img src="https://avatars.githubusercontent.com/u/81833154?s=60&v=4" width=50> | [Lisa's roadtrip](https://lisalou36.github.io/DH151/week%203/)
+<img src="https://avatars.githubusercontent.com/u/47194494?s=60&v=4" width=50> | [Daniel's disappearing act](https://danielliu524.github.io/DH151/Week3/index.html)
+<img src="https://avatars.githubusercontent.com/u/75969942?s=60&v=4" width=50> | [Adriana's siblings](https://adrianaromero819.github.io/DH151/Week3/index.html)
+<img src="https://avatars.githubusercontent.com/u/74166310?s=60&v=4" width=50> | [Hozumi's soundtrack](https://hoz-map.github.io/DH151/Week3/index.html)
 
 ### Week 4 Lab
 

@@ -29,6 +29,7 @@ who | link
 ### Week 4 Lab
 
 - [CSV Data driven maps](Lab)
+- [Storyboarding](https://github.com/yohman/21S-DH151/tree/main/Weeks/Week04/Lab#storyboard-exercise)
 
 # Assignments
 

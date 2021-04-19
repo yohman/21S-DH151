@@ -113,6 +113,7 @@ body {
 	grid-area: sidebar;
 	padding:10px;
 	background-color: #555;
+	overflow: auto;
 }
 
 .content {

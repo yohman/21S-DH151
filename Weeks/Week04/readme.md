@@ -6,15 +6,15 @@
 - Concerns/questions/comments, all welcome!
 - Let's meet! My office hours are Thursdays from 1-3, or by email appointment ([schedule here](https://calendly.com/yohda/officehours))
 
+### Guest speaker: Alesha Unpingco
+<img src="https://ace.alumni.ucla.edu/wp-content/uploads/2019/02/Alesha-Unpingco-500x500-300x300.png" width=200>
+
+
 ### Your Map Stories
 
-- [Map links](https://github.com/yohman/21S-DH151/discussions/18)
-- Breakout groups (20 minutes)
-	- Introductions: get to know one another!
-	- Take turns to show off your maproom
-	- Discuss challenges in creating your website, what other functionalities would make it "better"
+- [Map links](https://github.com/yohman/21S-DH151/discussions/27)
 
-### Maproom honorable mentions
+#### Maproom honorable mentions
 
 who | link 
 --- | ---
@@ -25,31 +25,26 @@ who | link
 
 ### Week 4 Lab
 
-- [Data APIs](Lab)
+- [CSV Data driven maps](Lab)
 
 # Assignments
 
-## Thinking Cap
-
-What is data?
-
-A reflection on your thoughts on "data." Big data, small data, data ethics, data transparency, data responsibility, open data, "bad" data.
-
-Read the following article ["Big Data Ethics"](../../Readings/BigDataEthics_Richards_King_2014.pdf).
-
- Write a short reaction piece directly into the discussion submission link below.
-
-- Submit your assignment [here](https://github.com/yohman/21S-DH151/discussions/26)
-
 ## Individual Coding Assignment
 
-Complete the in-class lab, and submit your finalized Story Map. Your Story Map should include (but not limited to) the following elements:
+Create a new maproom that is driven by data in a csv file. The CSV file may be authored by you, or it may be either downloaded from the web and cleaned up for use, or it may be directly referenced from a URL.
 
 - A fully functional interactive map
-- "Data" driven narrative, using a javascript object with key:value pairs that generate the markers, narratives, links, and images as necessary on the map
+- "Data" driven narrative, using data from a csv that generates the markers, narratives, links, and images as necessary on the map
 - A data-driven sidebar with clickable elements that help navigate the map-based narrative
-- At least one additional feature that is not covered in the lab that makes your map "different." This could be a unique design/layout of the site, or it could be a functionality component that adds to the user experience. Be creative!
+- A function driven structure
+
 - Submit your assignment [here](https://github.com/yohman/21S-DH151/discussions/27)
+
+## Group assignment:
+
+[Storyboard examples](https://docs.google.com/presentation/d/1famiX2lWNtsAk-o3_S48Ka7bImBAvRq3UXBKllDwMvw/edit?usp=sharing)
+
+- [Group Assignment #2](../../Group Assignments/GroupAssignment2.md)
 
 ## Reading assignment:
 

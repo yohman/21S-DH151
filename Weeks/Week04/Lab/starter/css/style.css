@@ -10,11 +10,12 @@ body,html {
 
 body {
 	display: grid;
-	grid-template-rows: 80px 1fr;
-	grid-template-columns: 250px 1fr;
+	grid-template-rows: 80px 1fr 50px;
+	grid-template-columns: 50% 50%;
 	grid-template-areas: 
 	"header header"
-	"sidebar content";
+	"sidebar content"
+	"footer footer";
 }
 
 .header {
@@ -34,4 +35,10 @@ body {
 
 .content {
 	grid-area: content;
+}
+
+.footer {
+	grid-area: footer;
+	padding:10px;
+	background-color: rgb(175, 175, 175);
 }

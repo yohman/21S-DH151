@@ -33,21 +33,29 @@ who | link
 
 Create a new maproom that is driven by data in a csv file. The CSV file may be authored by you, or it may be either downloaded from the web and cleaned up for use, or it may be directly referenced from a URL.
 
+If you cannot find a suitable csv file, you can convert your story map data object to a csv file for this assignment.
+
 - A fully functional interactive map
 - "Data" driven narrative, using data from a csv that generates the markers, narratives, links, and images as necessary on the map
 - A data-driven sidebar with clickable elements that help navigate the map-based narrative
 - A function driven structure
+  - a section for global variables
+  - initialize code with `$( document ).ready(function() {}`
+  - a `createMap()` function
+  - a `readCSV` function
+  - a `mapCSV` function
 
-- Submit your assignment [here](https://github.com/yohman/21S-DH151/discussions/27)
+
+- Submit your assignment [here](https://github.com/yohman/21S-DH151/discussions/37)
 
 ## Group assignment:
 
 [Storyboard examples](https://docs.google.com/presentation/d/1famiX2lWNtsAk-o3_S48Ka7bImBAvRq3UXBKllDwMvw/edit?usp=sharing)
 
-- [Group Assignment #2](../../Group Assignments/GroupAssignment2.md)
+- [Group Assignment #2](https://github.com/yohman/21S-DH151/blob/main/Group%20Assignments/GroupAssignment2.md)
 
 ## Reading assignment:
 
 Note: Reading assigments are mandatory. While there will be no quizzes or submission requirements, future labs are designed under the assumption that you have read and understood the materials in the readings.
 
-- Read [Chapter 2 CSS](https://geobgu.xyz/web-mapping2/css.html). 
+- Read [Find and question your data](https://handsondataviz.org/find.html). 

@@ -149,3 +149,7 @@ Now think of the site in a more complete sense. Sketch (or use your computer) to
 This is a group exercise. You may choose to individually draw separate storyboard wireframes, or you may designate a "drawer" with everybody else contributing ideas as he/she sketches away.
 
 - [source for inspiration](https://flickr.com/photos/soxiam/albums/224126/)
+
+### Submission
+
+Note that all three parts of this exercise are part of [Group Assignment #2](https://github.com/yohman/21S-DH151/blob/main/Group%20Assignments/GroupAssignment2.md).

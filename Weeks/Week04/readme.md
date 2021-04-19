@@ -7,8 +7,10 @@
 - Let's meet! My office hours are Thursdays from 1-3, or by email appointment ([schedule here](https://calendly.com/yohda/officehours))
 
 ### Guest speaker: Alesha Unpingco
+
 <img src="https://ace.alumni.ucla.edu/wp-content/uploads/2019/02/Alesha-Unpingco-500x500-300x300.png" width=200>
 
+[Your questions](https://github.com/yohman/21S-DH151/discussions/26)
 
 ### Your Map Stories
 

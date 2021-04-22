@@ -275,7 +275,7 @@ function readCSV(path){
 
 ### Varying circle size by value
 
-Consider that the circle size can be differentiated to visualize the number of cases per country.
+Consider that the circle size can be differentiated to visualize the number of cases per country. 
 
 Our `mapCSV()` function no longer needs to be fed data because `csvdata` is now a global variable that we can access. Instead, have `mapCSV()` require a date in order to generate a map of differential sized circles for a particular date.
 

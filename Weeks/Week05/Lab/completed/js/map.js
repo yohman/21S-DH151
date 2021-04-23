@@ -3,23 +3,15 @@ let map;
 let lat = 0;
 let lon = 0;
 let zl = 3;
-// let path = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv';
-
-
-let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQtXb-BG5Ee-AB8S8xjgEsLuEIoUGyvgtqrVsojnYkFePHy-VICUMkp9R16FHuPTv0uaRwHM29wbRxx/pub?gid=1347161303&single=true&output=csv"
-
+let path = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv';
 let markers = L.featureGroup();
 let csvdata;
 let lastdate;
-let JSONurl = "https://controllerdata.lacity.org/resource/ejf8-ekfc.json";
-let googleurl = "https://spreadsheets.google.com/feeds/list/1wk6ylUHjbJDatNBeTZCFtpISVVwgxy9QEGplVVuh5_M/on2nzw1/public/values?alt=json"
 
 // initialize
 $( document ).ready(function() {
 	createMap(lat,lon,zl);
 	readCSV(path);
-	// getJSON(JSONurl);
-	// getGoogleSheet(googleurl);
 });
 
 // create the map
@@ -40,20 +32,15 @@ function readCSV(path){
 			console.log(data);
 			// put the data in a global variable
 			csvdata = data;
-			data.data.forEach(function(item){
-				let marker = L.marker([item.latitude,item.longitude])
-				markers.addLayer(marker)
-			})
-			markers.addTo(map)
-			map.fitBounds(markers.getBounds())
-			// // get the last date
-			// lastdate = csvdata.meta.fields[csvdata.meta.fields.length-1];
-			
-			// // map the data
-			// mapCSV(lastdate);
 
-			// // create sidebar buttons
-			// createSidebarButtons();
+			// get the last date
+			lastdate = csvdata.meta.fields[csvdata.meta.fields.length-1];
+			
+			// map the data
+			mapCSV(lastdate);
+
+			// create sidebar buttons
+			createSidebarButtons();
 
 		}
 	});
@@ -64,12 +51,15 @@ function mapCSV(date){
 	// clear layers
 	markers.clearLayers();
 
+	// update the sidebar title with date
+	$('.sidebar-title').html(date);
+
 	// loop through each entry
 	csvdata.data.forEach(function(item,index){
 		if(item.Lat != undefined){
 			// circle options
 			let circleOptions = {
-				radius: radiusSize(item[date]),
+				radius: getRadiusSize(item[date]),
 				weight: 1,
 				color: 'white',
 				fillColor: 'red',
@@ -88,7 +78,7 @@ function mapCSV(date){
 
 }
 
-function radiusSize(value){
+function getRadiusSize(value){
 
 	let values = [];
 
@@ -107,56 +97,13 @@ function radiusSize(value){
 }
 
 function createSidebarButtons(){
-	let dates = csvdata.meta.fields.slice(csvdata.meta.fields.length-100)
-	dates.forEach(function(item){
-		$('.sidebar').append(`<div onmouseover="mapCSV('${item}')" class="sidebar-item">${item}</div>`)
+
+	// put all available dates into an array
+	// using slice to remove first 4 columns which are not dates
+	let dates = csvdata.meta.fields.slice(4)
+
+	// loop through each date and create a hover-able button
+	dates.forEach(function(item,index){
+		$('.sidebar-content').append(`<span onmouseover="mapCSV('${item}')" class="sidebar-item" title="${item}">●</span>`)
 	})
-}
-
-
-function getJSON(url){
-fetch(url)
-	.then(response => {
-		return response.json();
-	})
-	.then(data =>{
-		console.log(data)
-		mapJSON(data)
-	});
-}
-
-function mapJSON(data){
-	data.forEach(function(item,index){
-		let marker = L.circleMarker([item.latitude,item.longitude])
-		markers.addLayer(marker);
-	})
-	markers.addTo(map);
-	map.fitBounds(markers.getBounds());
-
-}
-
-
-function getGoogleSheet(url){
-fetch(url)
-	.then(response => {
-		return response.json();
-	})
-	.then(data =>{
-		console.log(data)
-		mapGoogleSheet(data);
-	})
-}
-
-
-function mapGoogleSheet(data){
-	data.feed.entry.forEach(function(item,index){
-		let marker = L.circleMarker([item.gsx$latitude.$t,item.gsx$longitude.$t])
-		.on('mouseover',function(){
-			this.bindPopup(`${item.content.$t}`).openPopup();
-		})
-		markers.addLayer(marker);
-	})
-	markers.addTo(map);
-	map.fitBounds(markers.getBounds());
-
 }

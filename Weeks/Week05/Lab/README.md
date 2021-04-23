@@ -2,6 +2,8 @@
 
 <img src="images/jhcovid.png">
 
+Welcome to week 5! As we gear ourselves to the midterm presentations, the purpose of this lab is to demonstrate the development of a project from start to finish. This lab will create a web map that shows the global growth of the covid 19 pandemic from start (being around January 2020) to present day. The data is brought in via a real-time feed from the [Johns Hopkins University Covid19 Data Repository](https://github.com/CSSEGISandData/COVID-19) on GitHub.
+
 ## Getting started
 
 ### Starter files
@@ -277,7 +279,11 @@ function readCSV(path){
 
 Consider that the circle size can be differentiated to visualize the number of cases per country. 
 
-Our `mapCSV()` function no longer needs to be fed data because `csvdata` is now a global variable that we can access. Instead, have `mapCSV()` require a date in order to generate a map of differential sized circles for a particular date.
+However, converting case counts by country to circles on a computer screen is challenging. Consider that at the time of this writing (4/22/2021), the single highest case count by country is in the United States at 31,929,351 cases. Imagine if we decided to create circles by case counts, the United States would have a radius of 32 million pixels! For this reason, we need to scale our the case counts to a pixel range that makes sense.
+
+A simple solution would be divide the case counts by a large enough number, that the highest total would equal to roughly 100 pixels, so divide by 32,000.
+
+Additionally, the `mapCSV()` function no longer needs to be fed data because `csvdata` is now a global variable that we can access. Instead, have `mapCSV()` require a date in order to generate a map of differential sized circles for *any given date*.
 
 ```js
 function mapCSV(date){
@@ -290,7 +296,45 @@ function mapCSV(date){
 		if(item.Lat != undefined){
 			// circle options
 			let circleOptions = {
-				radius: radiusSize(item[date]),　// call a function to determine radius size
+				radius: item[date]/320000,　// divide by high number to get usable circle sizes
+				weight: 1,
+				color: 'white',
+				fillColor: 'red',
+				fillOpacity: 0.5
+			}
+			let marker = L.circleMarker([item.Lat,item.Long],circleOptions)
+			.on('mouseover',function(){
+				this.bindPopup(`${item['Country/Region']}<br>Total confirmed cases as of ${date}: ${item[date]}`).openPopup()
+			}) // show data on hover
+			markers.addLayer(marker)	
+		}   
+	});
+
+	markers.addTo(map)
+	map.fitBounds(markers.getBounds())
+
+}
+```
+<img src="images/covidmap.png">
+
+However, imagine if the case counts continue to grow (knock on wood that it does not). What will happen to our map? Eventually, the size of the circles may overwhelm the map (again, knock on wood that this does not happen).
+
+Instead, why not create a function that *ensures* that no matter what the case count, the largest circle radius will *always* be 100 pixels?
+
+In the revised `mapCSV` function below, instead of a straight division of 320,000, the radius option calls a function `getRadiusSize(item[date])`. Update your `mapCSV` function as shown below, and then create the new function `radiusSize(date)` that returns the correct radius size, scaled so that the maximum
+
+```js
+function mapCSV(date){
+
+	// clear layers in case you are calling this function more than once
+	markers.clearLayers();
+
+	// loop through each entry
+	csvdata.data.forEach(function(item,index){
+		if(item.Lat != undefined){
+			// circle options
+			let circleOptions = {
+				radius: getRadiusSize(item[date]),　// call a function to determine radius size
 				weight: 1,
 				color: 'white',
 				fillColor: 'red',
@@ -310,19 +354,54 @@ function mapCSV(date){
 }
 ```
 
-## Other ways of importing data
+Complete the new function to get radius size:
 
-### From an existing API
+```js
+function getRadiusSize(value){
+	// calculate the min/max values in the data, 
+	// and create a range so that the largest circle size is 100
+	
+}
+```
+
+*Cheatsheet*: Take a peek at the answer [here](completed/js/maps.js).
+
+### Sidebar 
+
+The final part of this lab is to populate the sidebar. Create yet another function `createSidebarButtons()` that populates the sidebar with buttons or text links that update the map in meaningful ways.
+
+Example sidebar function:
+
+```js
+function createSidebarButtons(){
+
+	// put all available dates into an array
+	// using slice to remove first 4 columns which are not dates
+	let dates = csvdata.meta.fields.slice(4)
+
+	// loop through each date and create a hover-able button
+	dates.forEach(function(item,index){
+		$('.sidebar').append(`<span onmouseover="mapCSV('${item}')" class="sidebar-item" title="${item}">●</span>`)
+	})
+}
+```
+
+
+
+
+# Other ways of importing data
+
+## From an existing API
 
 <img src="images/artapi.png">
 
-Open data portals provide endpoints to their data, typically in json format. For smaller datasets, you can directly access their data if you have the endpoint URL. Consider the endpoint for the Public Art dataset from the LA Controller's data portal. The URL endpoint is:
+Open data portals provide endpoints to their data, typically in json format. For smaller datasets, you can directly access their data if you have the endpoint URL. Consider the endpoint for the [Public Art dataset](https://controllerdata.lacity.org/Audits-and-Reports/Public-Art/ejf8-ekfc/data) from the LA Controller's data portal. The URL endpoint is:
 
 ```
 https://controllerdata.lacity.org/resource/ejf8-ekfc.json
 ```
 
-Once you have the endpoint to a json file, you can import the data into your javascript project:
+Once you have the endpoint to a json file, you can import the data into your javascript project with the following `fetch()` command:
 
 ```js
 
@@ -347,13 +426,20 @@ Note that every API endpoint will look different. For this public art data, the 
 
 ```js
 function mapJSON(data){
+	// loop through each row in the json data
 	data.forEach(function(item,index){
+		// create a marker
 		let marker = L.circleMarker([item.latitude,item.longitude])
+
+		// add marker to featuregroup
 		markers.addLayer(marker);
 	})
-	markers.addTo(map);
-	map.fitBounds(markers.getBounds());
 
+	// add featuregroup to map
+	markers.addTo(map);
+
+	// zoom out to the extent of featuregroup
+	map.fitBounds(markers.getBounds());
 }
 ```
 
@@ -392,7 +478,7 @@ function readCSV(path){
 }
 ```
 
-The console reveals the data in the same format as a saved csv file:
+The console reveals the data in the same format as a saved csv file. Happy mapping!
 
 <img src="images/gpublish3.png">
 

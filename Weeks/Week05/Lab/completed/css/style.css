@@ -10,7 +10,7 @@ body,html {
 
 body {
 	display: grid;
-	grid-template-rows: 80px 1fr 50px;
+	grid-template-rows: 60px 1fr 40px;
 	grid-template-columns: 300px 1fr;
 	grid-template-areas: 
 	"header header"
@@ -30,7 +30,7 @@ body {
 	color: white;
 	grid-area: sidebar;
 	padding:10px;
-	background-color: #555;
+	background-color: rgb(60, 60, 60);
     overflow: auto;
 }
 
@@ -42,4 +42,17 @@ body {
 	grid-area: footer;
 	padding:10px;
 	background-color: rgb(175, 175, 175);
+}
+
+.sidebar-item {
+	/* border: 1px solid gray; */
+	padding: 2px;
+	/* background-color: #333; */
+	float:left;
+	cursor:pointer;
+	color: rgb(255, 79, 79);
+	font-size: 1em;
+}
+.sidebar-item:hover {
+	background-color: rgb(255, 0, 0);
 }

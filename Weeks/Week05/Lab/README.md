@@ -279,3 +279,121 @@ Consider that the circle size can be differentiated to visualize the number of c
 
 Our `mapCSV()` function no longer needs to be fed data because `csvdata` is now a global variable that we can access. Instead, have `mapCSV()` require a date in order to generate a map of differential sized circles for a particular date.
 
+```js
+function mapCSV(date){
+
+	// clear layers in case you are calling this function more than once
+	markers.clearLayers();
+
+	// loop through each entry
+	csvdata.data.forEach(function(item,index){
+		if(item.Lat != undefined){
+			// circle options
+			let circleOptions = {
+				radius: radiusSize(item[date]),　// call a function to determine radius size
+				weight: 1,
+				color: 'white',
+				fillColor: 'red',
+				fillOpacity: 0.5
+			}
+			let marker = L.circleMarker([item.Lat,item.Long],circleOptions)
+			.on('mouseover',function(){
+				this.bindPopup(`${item['Country/Region']}<br>Total confirmed cases as of ${date}: ${item[date]}`).openPopup()
+			}) // show data on hover
+			markers.addLayer(marker)	
+		}   
+	});
+
+	markers.addTo(map)
+	map.fitBounds(markers.getBounds())
+
+}
+```
+
+## Other ways of importing data
+
+### From an existing API
+
+<img src="images/artapi.png">
+
+Open data portals provide endpoints to their data, typically in json format. For smaller datasets, you can directly access their data if you have the endpoint URL. Consider the endpoint for the Public Art dataset from the LA Controller's data portal. The URL endpoint is:
+
+```
+https://controllerdata.lacity.org/resource/ejf8-ekfc.json
+```
+
+Once you have the endpoint to a json file, you can import the data into your javascript project:
+
+```js
+
+let url = "https://controllerdata.lacity.org/resource/ejf8-ekfc.json"
+
+function getJSON(url){
+fetch(url)
+	.then(response => {
+		return response.json();
+	})
+	.then(data =>{
+		console.log(data)
+	}
+}
+```
+
+Inspect the console:
+
+<kbd><img src="images/artjson.png"></kbd>
+
+Note that every API endpoint will look different. For this public art data, the endpoint itself is an array of objects. Therefore, you can loop through it as-is:
+
+```js
+function mapJSON(data){
+	data.forEach(function(item,index){
+		let marker = L.circleMarker([item.latitude,item.longitude])
+		markers.addLayer(marker);
+	})
+	markers.addTo(map);
+	map.fitBounds(markers.getBounds());
+
+}
+```
+
+## Google Sheets
+
+If your data is in a Google Sheet, you can import it directly (and in real time) to your javascript project.
+
+1. Open a google sheet document
+1. Go to File, Publish
+1. In the first drop down, choose the sheet you want to publish
+1. In the second drop down, choose `Comma-separated values (.csv)`
+1. Publish the sheet to the web
+
+	<img src="images/gpublish.png">
+
+1. Copy the URL
+
+	<img src="images/gpublish2.png">
+
+1. You can use the URL as a csv file feed using the same Papaparse code:
+
+
+```js
+let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQtXb-BG5Ee-AB8S8xjgEsLuEIoUGyvgtqrVsojnYkFePHy-VICUMkp9R16FHuPTv0uaRwHM29wbRxx/pub?gid=1347161303&single=true&output=csv"
+
+// function to read csv data
+function readCSV(path){
+	Papa.parse(path, {
+		header: true,
+		download: true,
+		complete: function(csvdata) {
+			console.log(csvdata);
+			
+		}
+	});
+}
+```
+
+The console reveals the data in the same format as a saved csv file:
+
+<img src="images/gpublish3.png">
+
+

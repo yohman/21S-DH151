@@ -1,4 +1,4 @@
-# Week 4
+# Week 5
 
 ## Today's agenda:
 
@@ -6,9 +6,9 @@
 - Concerns/questions/comments, all welcome!
 - Let's meet! My office hours are Thursdays from 1-3, or by email appointment ([schedule here](https://calendly.com/yohda/officehours))
 
-### Your CSV Maps
+### Your CSV maps
 
-- [Map links](https://github.com/yohman/21S-DH151/discussions/27)
+- [Map links](https://github.com/yohman/21S-DH151/discussions/37)
 
 #### Maproom honorable mentions
 
@@ -24,10 +24,11 @@ who | link
 
 ### Your storyboards
 
+- https://github.com/yohman/21S-DH151/discussions/33
 
 ### Week 5 Lab
 
-- [API Data driven maps](Lab)
+- [Covid map development](Lab)
 
 # Assignments
 

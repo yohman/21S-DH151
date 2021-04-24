@@ -20,7 +20,7 @@ Notice the added `footer` class that include a link to the data source.
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Covid Map</title>
+	<title>World Covid Map</title>
 	<meta charset="utf-8" />
 
 	<!-- style sheets -->
@@ -40,7 +40,7 @@ Notice the added `footer` class that include a link to the data source.
 <body>
 
 	<div class="header">
-		Covid Map
+		Covid Confirmed Cases by Country
 	</div>
 	<div class="sidebar">
 		
@@ -49,7 +49,7 @@ Notice the added `footer` class that include a link to the data source.
 		<div id="map"></div>
 	</div>
 	<div class="footer">
-		Source: <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a>
+		Data source: <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a>
 	</div>
 
 	<script src="js/map.js"></script>
@@ -116,7 +116,7 @@ body,html {
 
 body {
 	display: grid;
-	grid-template-rows: 80px 1fr 50px;
+	grid-template-rows: 60px 1fr 40px;
 	grid-template-columns: 300px 1fr;
 	grid-template-areas: 
 	"header header"

@@ -44,10 +44,8 @@ body {
 	background-color: rgb(175, 175, 175);
 }
 
-.sidebar-item {
-	/* border: 1px solid gray; */
-	padding: 2px;
-	/* background-color: #333; */
+.sidebar-item {	/* border: 1px solid gray; */
+	padding: 2px;	/* background-color: #333; */
 	float:left;
 	cursor:pointer;
 	color: rgb(255, 79, 79);

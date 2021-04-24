@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>World</title>
+	<title>World Covid Map</title>
 	<meta charset="utf-8" />
 
 	<!-- style sheets -->
@@ -14,11 +14,14 @@
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+	<!-- papaparse for csv data -->
+	<script src="js/papaparse.min.js"></script>
+
 </head>
 <body>
 
 	<div class="header">
-		Robin Dunitz Slides of Los Angeles Murals, 1925-2002
+		Covid Confirmed Cases by Country
 	</div>
 	<div class="sidebar">
 		
@@ -27,7 +30,7 @@
 		<div id="map"></div>
 	</div>
 	<div class="footer">
-		Source: <a href="http://digitallibrary.usc.edu/cdm/landingpage/collection/p15799coll15">USC Libraries</a>
+		Data source: <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a>
 	</div>
 
 	<script src="js/map.js"></script>

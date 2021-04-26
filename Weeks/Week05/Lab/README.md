@@ -12,9 +12,9 @@ Welcome to week 5! As we gear ourselves to the midterm presentations, the purpos
 
 Or, you can create the files as indicated here:
 
-### `Week4/index.html`
+### `Week5/index.html`
 
-Notice the added `footer` class that include a link to the data source.
+Notice the updated title and data source. Papaparse is also included in the head using a [cdn](https://cdnjs.com/libraries/PapaParse) link.
 
 ```html
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ Notice the added `footer` class that include a link to the data source.
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 	<!-- papaparse for csv data -->
-	<script src="js/papaparse.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
 </head>
 <body>
@@ -58,8 +58,8 @@ Notice the added `footer` class that include a link to the data source.
 </html>
 ```
 
-### `Week4/js/map.js`
-Notice the updated structure in the `map.js` code:
+### `Week5/js/map.js`
+Notice the updated global variable list, and the `readCSV()` function from the previous lab.
 
 ```js
 // Global variables
@@ -93,15 +93,13 @@ function readCSV(path){
 		complete: function(csvdata) {
 			console.log(csvdata);
 			
-			// map the csvdata
-			mapCSV(csvdata);
 		}
 	});
 }
 ```
 
-### `Week4/css/style.css`
-Notice the added css for the `footer` class and the 50/50 split.
+### `Week5/css/style.css`
+Notice the adjusted grid-termplate values.
 
 ```css
 body,html {
@@ -151,6 +149,10 @@ body {
 }
 ```
 
+Confirm that you have your "starter" code ready to go by activating live server and seeing the starter map on your browser window. 
+
+<img src="images/starter.png">
+
 ## Mapping Covid CSV data
 
 Take a look at the csv data as hosted by John's Hopkins:
@@ -163,50 +165,23 @@ Rather than downloading the data to use, we will rely on a direct feed from the 
 
 We can use the URL link, rather than a relative link to a local file, to bring in the data. Consider why this is useful, and in what situations this may not be a good idea.
 
-Add a global variable for `path` to indicate the path to the csv data.
+### Updating the path variable
+
+Update the global variable for `path` to indicate the path to the covid csv data.
 
 ```js
 let path = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv';
 ```
 
-Continuing from our previous lab, we have a `readCSV()` function to read our data. It will output the results in the console. 
+### Store the data as a global variable
 
-<kbd><img src="images/console.png"></kbd>
-
-Inspect on how the data is structured.
-
-#### **Exercise 1:** Begin to construct the function to map the data. Fill in the blanks in the function below to map the countries.
-
-```js
-function mapCSV(csvdata){
-
-	// loop through every row in the csv data
-	csvdata.data.forEach(function(item,index){
-		// create a circleMarker for each country
-
-
-		// add the circleMarker to the featuregroup
-
-
-	})
-
-	// add the featuregroup to the map
-
-
-	// fit the circleMarkers to the map view
-
-}
-```
-
-## Inspecting the metadata
-
-Papaparse stores metadata of the csv file in its object under the variable `meta`. In order to access the csv object, create a global variable for `csvdata`.
+Global variables are variables that are accessible anywhere in your code. If you create a variable inside a function, it will only be accessible within that function. In order to "globalize" our data, let's first create a global variable as a placeholder for it.
 
 ```js
 let csvdata;
 ```
 
-Next, within the function to read the csv data, assign the data to the `csvdata` global variable.
+Next, within the function to read the csv data, assign the data to the `csvdata` global variable. Additionally, create the call to the `mapCSV()` function.
 
 ```js
 // function to read csv data
@@ -218,26 +193,72 @@ function readCSV(path){
 			console.log(data);
 			// put the data in a global variable
 			csvdata = data;
-			// map the data
-			mapCSV(data);
+
+			// call the mapCSV function to map the data
+			mapCSV();
 		}
 	});
 }
 ```
 
-Return to your browsers live view, and open the developer's console. At the prompt, type in the following commands:
+### Inspecting the browser console
 
-To get the number of fields:
+Save the `map.js` file, and view the console output in your browser window.
+
+<kbd><img src="images/console.png"></kbd>
+
+Inspect on how the data is structured. What does each row represent? Are there locational attributes? How is the data for each day represented in the data?
+
+#### **Exercise 1:** Begin to construct the function to map the data. Add the function for `mapCSV(csvdata)` as shown below, and fill in the blanks to map the countries.
+
+NOTE: The data from Johns Hopkins may include null or empty values, which in javascript shows up as `undefined`. In order to check whether a variable exists (such as the `item.Lat` field), add an `if` statement prior to creating a marker. The `if` statement is provided below.
+
 ```js
-csvdata.meta.fields.length
+function mapCSV(){
+
+	// loop through every row in the csv data
+	csvdata.data.forEach(function(item,index){
+		// check to make sure the Latitude column exists
+		if(item.Lat != undefined){
+
+			// Lat exists, so create a circleMarker for each country
+
+
+			// add the circleMarker to the featuregroup
+
+		} // end if
+	})
+
+	// add the featuregroup to the map
+
+
+	// fit the circleMarkers to the map view
+
+}
 ```
 
-follow this with:
+<img src="images/covidcircles.png">
+
+### Inspecting the metadata
+
+Nice map! We now have a visual representation of every country in the covid data on the map. Let's investigate on how we are going to map the cases per country.
+
+Papaparse stores metadata of the csv file in its object under the variable `meta`. 
+
+Return to your browsers live view, and open the developer's console. At the prompt, type in the following commands:
+
+What are the fields?
 ```js
 csvdata.meta.fields
 ```
 
-To get the last date in the data:
+How many fields are there?
+
+```js
+csvdata.meta.fields.length
+```
+
+To get the last fieldname, i.e. the last date in the data:
 
 ```js
 ccsvdata.meta.fields[csvdata.meta.fields.length-1]
@@ -252,7 +273,7 @@ First, create a global variable for `lastdate`:
 let lastdate;
 ```
 
-Next, assign the last date to the global variable.
+Next, assign the last date to the global variable. At the same time, create the call to a new function `mapCSV(lastdate)` that will create the map with the data for the last date.
 
 ```js
 // function to read csv data
@@ -286,6 +307,7 @@ A simple solution would be divide the case counts by a large enough number, that
 Additionally, the `mapCSV()` function no longer needs to be fed data because `csvdata` is now a global variable that we can access. Instead, have `mapCSV()` require a date in order to generate a map of differential sized circles for *any given date*.
 
 ```js
+// map function now requires a date
 function mapCSV(date){
 
 	// clear layers in case you are calling this function more than once
@@ -385,6 +407,26 @@ function createSidebarButtons(){
 	})
 }
 ```
+
+And add the stylesheet class for `sidebar-item` to the `style.css` file:
+
+```css
+
+.sidebar-item {	/* border: 1px solid gray; */
+	padding: 2px;	/* background-color: #333; */
+	float:left;
+	cursor:pointer;
+	color: rgb(255, 79, 79);
+	font-size: 1em;
+}
+.sidebar-item:hover {
+	background-color: rgb(255, 0, 0);
+}
+```
+<img src="images/covidfinal.png">
+
+You can see the final version [here](https://yohman.github.io/21S-DH151/Weeks/Week05/Lab/completed) 
+
 
 
 

@@ -26,11 +26,9 @@ function readCSV(path){
 	Papa.parse(path, {
 		header: true,
 		download: true,
-		complete: function(csvdata) {
-			console.log(csvdata);
+		complete: function(data) {
+			console.log(data);
 			
-			// map the csvdata
-			mapCSV(csvdata);
 		}
 	});
 }

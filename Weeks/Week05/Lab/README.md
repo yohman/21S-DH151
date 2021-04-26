@@ -487,6 +487,8 @@ function mapJSON(data){
 
 ## Google Sheets
 
+Check the [following google sheet](https://docs.google.com/spreadsheets/d/1wk6ylUHjbJDatNBeTZCFtpISVVwgxy9QEGplVVuh5_M/edit?usp=sharing) of the Dunitz data as an example.
+
 If your data is in a Google Sheet, you can import it directly (and in real time) to your javascript project.
 
 1. Open a google sheet document

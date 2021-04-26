@@ -386,7 +386,7 @@ function getRadiusSize(value){
 }
 ```
 
-*Cheatsheet*: Take a peek at the answer [here](completed/js/maps.js).
+*Cheatsheet*: Take a peek at the answer [here](https://github.com/yohman/21S-DH151/blob/main/Weeks/Week05/Lab/completed/js/map.js).
 
 ### Sidebar 
 

@@ -24,7 +24,8 @@
 
 - [Covid map development](Lab)
 
-# Assignments
 
-## Midterms
 
+# Midterms
+
+Read the instructions [here](https://github.com/yohman/21S-DH151/tree/main/Midterm%20and%20Finals).

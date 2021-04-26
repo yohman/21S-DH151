@@ -27,7 +27,7 @@ There are three deliverables for the mid-term project.
       4. Demonstrate the site and its functionalities! (3 minutes)
       5. Provide next steps (1 minute)
 
-Submit your midterm project materials [here]().
+Submit your midterm project materials [here](https://github.com/yohman/21S-DH151/discussions/47).
 
 ## Final Project (30% of your final grade)
 ### Overview

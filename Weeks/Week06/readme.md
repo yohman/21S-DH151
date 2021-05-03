@@ -39,7 +39,7 @@ Do not provide feedback to a project that already has more than six comments!
 
 Topic: Thick mapping in the digital humanities
 
-[Read pages 6-21](../../Readings/HyperCities_2014.pdf)
+[Read pages 6-21](https://github.com/yohman/21S-DH151/raw/main/Readings/HyperCities_2014_FINAL.pdf)
 
 Submit a "thinking cap" reaction to the reading. Specifically, discuss the following:
 

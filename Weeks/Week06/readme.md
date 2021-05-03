@@ -8,7 +8,7 @@
 
 ### Midterm Presentations
 
-<img src="groups.png">
+<img src="groups2.png">
 
 Order to be determined during class:
 

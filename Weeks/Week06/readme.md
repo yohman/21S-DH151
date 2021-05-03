@@ -8,6 +8,8 @@
 
 ### Midterm Presentations
 
+<img src="groups.png">
+
 Order to be determined during class:
 
 Group | Members

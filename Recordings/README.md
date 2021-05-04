@@ -7,3 +7,4 @@ Check back here a day after class to find the latest zoom recordings.
 - [Week 3: Group topic presentations, Story Map coding finale](https://ucla.zoom.us/rec/share/f0-u7Xdl2lowpLVLEgFSPqcXeS-v4pX8vm-dWGTngWQTDddw0j7xn73XPjJ8D1ur.2qqd8vPzoMLGXAcE?startTime=1618261627000) (Lab begins at the 1:02 mark)
 - [Week 4: Alesha Unpingco on UX Design, CSV lab](https://ucla.zoom.us/rec/share/DBzHK4CVVipmm-_1Hzff1OvlO3OYOAnZhhYf9lQ7CTAARcKVSf9xE7jdw978JXt6.PQcBTXEP4VIY0feZ?startTime=1618866313000) (Lab begins at the 1:15 mark)
 - [Week 5: CSV Map highlights, Storyboard reveal, Covid map lab](https://ucla.zoom.us/rec/share/KiytV7uzelpwROyBIpZpsB2EME_njr0teCIg1HhqCFjbwFrW3R2koFijO1iG2J4.oP7CdwuMA9s9fRYb?startTime=1619471256000) (lab begins at 0:58 mark)
+- [Week 6: Midterm Presentations](https://ucla.zoom.us/rec/share/QX3VAmmlQKQMh229-bKeHCZevuCzik4EpkyJDVo4SBWg6cZeBNDu7oyM9XI0-Xa2.ioVAZ4E82QmPn6YB?startTime=1620076049000)

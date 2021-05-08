@@ -170,7 +170,7 @@ function mapGeoJSON(){
 	geojson_layer = L.geoJson(geojson_data).addTo(map);
 
 	// fit to bounds
-	map.fitBounds(geojson.getBounds())
+	map.fitBounds(geojson_layer.getBounds())
 }
 ```
 

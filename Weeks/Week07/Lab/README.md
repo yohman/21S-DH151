@@ -150,12 +150,18 @@ Choropleth maps are based on polygon layers. To create choropleth maps with leaf
 
 For this lab, go to https://geojson-maps.ash.ms/ and download all regions of the world in low resolution, and save it in `Week7/data/world.json`.
 
+Once downloaded, add the following global variables:
+
 ```js
 // put this in your global variables
 let geojsonPath = 'data/world.json';
 let geojson_data;
 let geojson_layer;
+```
 
+Create the function `getGeoJSON()` that will read the geojson file into the project. Notice that we are adding the `mapGeoJSON()` function call here, for a function that we will create in the next step.
+
+```js
 // function to get the geojson data
 function getGeoJSON(){
 
@@ -189,7 +195,7 @@ Now that we have our geojson data in our javascript, we can proceed to map it. L
 
 - https://leafletjs.com/reference-1.7.1.html#geojson
 
-Add the following function:
+Add the `mapGeoJSON()` function:
 
 ```js
 // function to map a geojson file
@@ -591,7 +597,7 @@ function resetHighlight(e){
 
 ## Completed code
 
-Find the completed files for this lab [here].(completed)
+Find the completed files for this lab [here](completed).
 
 ## Challenge #1:
 

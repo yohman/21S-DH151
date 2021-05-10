@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>World Covid Map</title>
+	<title>World Choropleth</title>
 	<meta charset="utf-8" />
 
 	<!-- style sheets -->
@@ -14,20 +14,17 @@
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-	<!-- papaparse for csv data -->
-	<script src="js/papaparse.min.js"></script>
-
-	<!-- classy brew -->
+   	<!-- classy brew -->
 	<script src="js/classybrew.js"></script>
 </head>
 <body>
 
 	<div class="header">
-		Covid Confirmed Cases by Country
+		World Choropleth
 	</div>
 	<div class="sidebar">
-		<div class="sidebar-title">Date</div>
-		<div class="sidebar-content"></div>
+		<div class="map-item" onclick="mapGeoJSON('pop_est',5,'YlOrRd','quantiles');">Population</div>
+		<div class="map-item" onclick="mapGeoJSON('gdp_md_est',5,'PuBuGn','quantiles');">GDP</div>
 	</div>
 	<div class="content">
 		<div id="map"></div>

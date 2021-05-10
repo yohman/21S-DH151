@@ -589,6 +589,10 @@ function resetHighlight(e){
 }
 ```
 
+## Completed code
+
+Find the completed files for this lab [here].(completed)
+
 ## Challenge #1:
 
 Create buttons in the sidebar that will allow you to map different variables.

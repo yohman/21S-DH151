@@ -4,12 +4,20 @@ let lat = 0;
 let lon = 0;
 let zl = 3;
 let path = '';
-let markers = L.featureGroup();
+
+// put this in your global variables
+let geojsonPath = 'data/world.json';
+let geojson_data;
+let geojson_layer;
+
+let brew = new classyBrew();
+let legend = L.control({position: 'bottomright'});
+let info_panel = L.control();
 
 // initialize
 $( document ).ready(function() {
 	createMap(lat,lon,zl);
-	getGeoJSON(fieldtomap);
+	getGeoJSON();
 });
 
 // create the map
@@ -21,33 +29,19 @@ function createMap(lat,lon,zl){
 	}).addTo(map);
 }
 
-// let geojson;
-
-// default field to map
-let fieldtomap = 'pop_est'
-let geojson_data;
-let geojson_layer;
-let myGeoJSONPath = 'data/merge.geojson';
-let brew= new classyBrew();
-
 // function to get the geojson data
 function getGeoJSON(){
 
-	$.getJSON(myGeoJSONPath,function(data){
-		// var map = L.map('map').setView([39.74739, -105], 4);
+	$.getJSON(geojsonPath,function(data){
 		console.log(data)
 
 		// put the data in a global variable
 		geojson_data = data;
 
-		// get the map started
-		mapGeoJSON('pop_est',5,'RdYlGn','jenks')
-		// createLegend()
+		// call the map function
+		mapGeoJSON('pop_est',5,'YlOrRd','quantiles');
 	})
-
 }
-
-
 function mapGeoJSON(field,num_classes,color,scheme){
 
 	// clear layers in case it has been mapped already
@@ -72,15 +66,17 @@ function mapGeoJSON(field,num_classes,color,scheme){
 	brew.setColorCode(color);
 	brew.classify(scheme);
 
-	// create the geojson layer
-	geojson_layer = L.geoJson(geojson_data,{
-		style: getStyle,
-		onEachFeature: onEachFeature
+	// create the layer and add to map
+	geojson_layer = L.geoJson(geojson_data, {
+		style: getStyle, //call a function to style each feature
+		onEachFeature: onEachFeature // actions on each feature
 	}).addTo(map);
 
-
 	map.fitBounds(geojson_layer.getBounds())
+	// create the legend
 	createLegend();
+
+	// create the infopanel
 	createInfoPanel();
 }
 
@@ -94,6 +90,8 @@ function getStyle(feature){
 		fillOpacity: 0.8
 	}
 }
+
+// return the color for each feature
 function getColor(d) {
 
 	return d > 1000000000 ? '#800026' :
@@ -105,8 +103,6 @@ function getColor(d) {
 		   d > 10000000   ? '#FED976' :
 					  '#FFEDA0';
 }
-
-var legend = L.control({position: 'bottomright'});
 
 function createLegend(){
 	legend.onAdd = function (map) {
@@ -132,6 +128,7 @@ function createLegend(){
 		legend.addTo(map);
 }
 
+// Function that defines what will happen on user interactions with each feature
 function onEachFeature(feature, layer) {
 	layer.on({
 		mouseover: highlightFeature,
@@ -140,9 +137,11 @@ function onEachFeature(feature, layer) {
 	});
 }
 
+// on mouse over, highlight the feature
 function highlightFeature(e) {
 	var layer = e.target;
 
+	// style to use on mouse over
 	layer.setStyle({
 		weight: 2,
 		color: '#666',
@@ -153,22 +152,19 @@ function highlightFeature(e) {
 		layer.bringToFront();
 	}
 
-	// update info panel
-	info_panel.update(layer.feature.properties);
+	info_panel.update(layer.feature.properties)
 }
 
+// on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
 	geojson_layer.resetStyle(e.target);
-
-	// reset info panel
-	info_panel.update()
+	info_panel.update() // resets infopanel
 }
 
+// on mouse click on a feature, zoom in to it
 function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
 }
-
-let info_panel = L.control();
 
 function createInfoPanel(){
 

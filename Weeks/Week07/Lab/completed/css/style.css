@@ -30,7 +30,7 @@ body {
 	color: white;
 	grid-area: sidebar;
 	padding:10px;
-	background-color: rgb(60, 60, 60);
+	background-color: #555;
 	overflow: auto;
 }
 
@@ -42,17 +42,6 @@ body {
 	grid-area: footer;
 	padding:10px;
 	background-color: rgb(175, 175, 175);
-}
-
-.sidebar-item {	/* border: 1px solid gray; */
-	padding: 2px;	/* background-color: #333; */
-	float:left;
-	cursor:pointer;
-	color: rgb(255, 79, 79);
-	font-size: 1em;
-}
-.sidebar-item:hover {
-	background-color: rgb(255, 0, 0);
 }
 
 /* legend styles */
@@ -81,4 +70,10 @@ body {
 	float: left;
 	margin-right: 8px;
 	opacity: 0.7;
+}
+
+.map-item {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #111;
 }

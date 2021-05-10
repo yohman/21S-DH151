@@ -1,7 +1,15 @@
-# Week 7 Lab
+# Week 7 Lab: Choropleth Maps
 
+Welcome to week 7! This week, we will learn how to create choropleth maps. Choropleth maps are a popular method to display statistical data through various shades of patterns or colors on a map.
 
-Welcome to week 7!
+<a href="https://www.socialexplorer.com/7ed34994e8/view" target="_blank"><img src="images/chorovbubbles.png"></a>
+
+## The history of choropleth maps
+
+<img src="images/chorohist.png">
+Source
+
+- https://arcg.is/15Xffe
 
 ## Getting started
 
@@ -13,13 +21,11 @@ Or, you can create the files as indicated here:
 
 ### `Week4/index.html`
 
-Notice the added `footer` class that include a link to the data source.
-
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>World Covid Map</title>
+	<title>World Choropleth</title>
 	<meta charset="utf-8" />
 
 	<!-- style sheets -->
@@ -32,14 +38,11 @@ Notice the added `footer` class that include a link to the data source.
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-	<!-- papaparse for csv data -->
-	<script src="js/papaparse.min.js"></script>
-
 </head>
 <body>
 
 	<div class="header">
-		Covid Confirmed Cases by Country
+		World Choropleth
 	</div>
 	<div class="sidebar">
 		
@@ -57,7 +60,6 @@ Notice the added `footer` class that include a link to the data source.
 ```
 
 ### `Week4/js/map.js`
-Notice the updated structure in the `map.js` code:
 
 ```js
 // Global variables
@@ -66,12 +68,10 @@ let lat = 0;
 let lon = 0;
 let zl = 3;
 let path = '';
-let markers = L.featureGroup();
 
 // initialize
 $( document ).ready(function() {
     createMap(lat,lon,zl);
-	readCSV(path);
 });
 
 // create the map
@@ -86,7 +86,6 @@ function createMap(lat,lon,zl){
 ```
 
 ### `Week4/css/style.css`
-Notice the added css for the `footer` class and the 50/50 split.
 
 ```css
 body,html {
@@ -135,23 +134,32 @@ body {
 	background-color: rgb(175, 175, 175);
 }
 ```
+Turn on Go Live from your Live Server extension (bottom right of VSCode) and make sure your map works and looks like this:
+
+<kbd><img src="images/choro1.png"></kbd>
 
 ## Mapping GeoJSON data
 
+Choropleth maps are based on polygon layers. To create choropleth maps with leaflet, `geojson` is the most popular file type. Note that `topojson` is another format that is favored by many because of its smaller footprint.
+
 - Global source: https://geojson-maps.ash.ms/
 - Local source: https://boundaries.latimes.com/sets/
+- For US Census Data, [Census Reporter](https://censusreporter.org/) allows you to search for any census variable and download as a `geojson` file.
+
+### Download global geojson data
+
+For this lab, go to https://geojson-maps.ash.ms/ and download all regions of the world in low resolution, and save it in `Week7/data/world.json`.
 
 ```js
 // put this in your global variables
 let geojsonPath = 'data/world.json';
 let geojson_data;
 let geojson_layer;
-let fieldtomap = 'pop_est';
 
 // function to get the geojson data
 function getGeoJSON(){
 
-	$.getJSON(myGeoJSONPath,function(data){
+	$.getJSON(geojsonPath,function(data){
 		console.log(data)
 
 		// put the data in a global variable
@@ -160,9 +168,30 @@ function getGeoJSON(){
 		// call the map function
 		mapGeoJSON()
 	})
-
 }
+```
+Next, make sure to call the `getGeoJSON()` function in your initialize functions:
 
+```js
+// initialize
+$( document ).ready(function() {
+	createMap(lat,lon,zl);
+	getGeoJSON();
+});
+```
+Take a moment to inspect the console output of the geojson data. What do you see? What fields are useful, and which may you want to use to generate a choropleth map with?
+
+<img src="images/geojsonconsole.png">
+
+### Mapping polygons
+
+Now that we have our geojson data in our javascript, we can proceed to map it. Leaflet comes with a handy `L.geoJson()` function which allows us to easily map it as a layer that sits on top of our basemap.
+
+- https://leafletjs.com/reference-1.7.1.html#geojson
+
+Add the following function:
+
+```js
 // function to map a geojson file
 function mapGeoJSON(){
 
@@ -170,27 +199,30 @@ function mapGeoJSON(){
 	geojson_layer = L.geoJson(geojson_data).addTo(map);
 
 	// fit to bounds
-	map.fitBounds(geojson.getBounds())
+	map.fitBounds(geojson_layer.getBounds())
 }
 ```
+<img src="images/choro2.png">
 
 ## Creating a choropleth map
 
-The documentation provided by leaflet:
+So far, so good, but we want to color the maps with shades that have statistical values, and tell a story.
+
+Modify `L.geoJson` by adding an argument to style each feature by calling the `getStyle()` function. The `getStyle()` function styles the features, and also calls a `getColor()` function to determine what fill color to use based on the value provided.
 
 ```js
 function mapGeoJSON(){
 
 	// create the layer and add to map
-	geojson_layer = L.geoJson(geojson_data).addTo(map);
-
-	// set the style for the choropleth
-	geojson_layer.setStyle(getStyle)
+	geojson_layer = L.geoJson(geojson_data, {
+		style: getStyle //call a function to style each feature
+	}).addTo(map);
 
 	// fit to bounds
-	map.fitBounds(geojson.getBounds())
+	map.fitBounds(geojson_layer.getBounds())
 }
 
+// style each feature
 function getStyle(feature){
 	return {
 		stroke: true,
@@ -201,6 +233,8 @@ function getStyle(feature){
 		fillOpacity: 0.8
 	}
 }
+
+// return the color for each feature
 function getColor(d) {
 
 	return d > 1000000000 ? '#800026' :
@@ -214,11 +248,19 @@ function getColor(d) {
 }
 ```
 
+<img src="images/choro3.png">
+
 ## Classybrew to the rescue
 
-[ClassyBrew](http://tannerjt.github.io/geotanner/javascript/color-theory/2014/10/29/classybrew-jenks-heart-colorbrewer.html) on GitHub
+Consider all the work to create the previous chorpleth map. There are a lot of "hard coded" values, especially in determining the break points for the data.
 
-Create the file classbrew.js and save it in your `data/js` folder from their GitHub page:
+Fortunately, the open source community has come to the rescue, and provided an extension that allows us to easily create breakpoints based on statistical standards for choropleth mapping.
+
+Check out [ClassyBrew](http://tannerjt.github.io/geotanner/javascript/color-theory/2014/10/29/classybrew-jenks-heart-colorbrewer.html) on GitHub.
+
+### Download classbrew and add it to your project
+
+Go to the following link from the classybrew github page, and save the file `classbrew.js`  in your `data/js` folder from their GitHub page:
 
 https://raw.githubusercontent.com/tannerjt/classybrew/master/src/classybrew.js
 
@@ -229,7 +271,38 @@ Add it to your `index.html` file:
 	<script src="js/classybrew.js"></script>
 ```
 
-Now you are ready to brew!
+Now you are ready to brew! We modify the `mapGeoJSON()` function by:
+
+- creating a `brew` object
+- adding an argument for `field` to be used as the choropleth variable
+- clearing layers that already exist, allowing the function to be called repeatedly
+- adding the "brew" arguments
+
+Create the brew object in your global variables:
+
+```js
+let brew = new classyBrew();
+```
+
+Modify the call the `mapGeoJSON()` by adding the field to be used:
+
+```js
+// function to get the geojson data
+function getGeoJSON(){
+
+	$.getJSON(geojsonPath,function(data){
+		console.log(data)
+
+		// put the data in a global variable
+		geojson_data = data;
+
+		// call the map function
+		mapGeoJSON('pop_est') // add a field to be used
+	})
+}
+```
+
+Add new features to `mapGeoJSON` and `getStyle`:
 
 ```js
 function mapGeoJSON(field){
@@ -253,14 +326,13 @@ function mapGeoJSON(field){
 	// set up the "brew" options
 	brew.setSeries(values);
 	brew.setNumClasses(5);
-	brew.setColorCode('Blues');
-	brew.classify('equal_interval');
+	brew.setColorCode('YlOrRd');
+	brew.classify('quantiles');
 
-	// create the geojson layer
-	geojson_layer = L.geoJson(geojson_data);
-
-	// set the style
-	geojson_layer.setStyle(getStyle).addTo(map)
+	// create the layer and add to map
+	geojson_layer = L.geoJson(geojson_data, {
+		style: getStyle //call a function to style each feature
+	}).addTo(map);
 
 	map.fitBounds(geojson_layer.getBounds())
 }
@@ -276,6 +348,7 @@ function getStyle(feature){
 	}
 }
 ```
+<img src="images/choro4.png">
 
 ### Brew options
 
@@ -306,9 +379,16 @@ brew.getColorCodes();  // returns
 */
 ```
 
-### Adding a legend
+## Adding a legend
 
-First, the css:
+<img src="images/choro5.png">
+
+Leaflet comes with "controls" that allows you to create panels of information. We can use a control to add a legend.
+
+- https://leafletjs.com/reference-1.7.1.html#control
+
+First, the css to add to `style.css`:
+
 ```css
 /* legend styles */
 .info {
@@ -339,23 +419,29 @@ First, the css:
 }
 ```
 
+Add a global variable for the legend object:
+
+```js
+let legend = L.control({position: 'bottomright'});
+```
+
 The javascript:
 
 ```js
 function createLegend(){
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
-		percents = brew.getBreaks(),
+		breaks = brew.getBreaks(),
 		labels = [],
 		from, to;
 		
-		for (var i = 0; i < percents.length; i++) {
-			from = percents[i];
-			to = percents[i + 1];
+		for (var i = 0; i < breaks.length; i++) {
+			from = breaks[i];
+			to = breaks[i + 1];
 			if(to) {
 				labels.push(
 					'<i style="background:' + brew.getColorInRange(from) + '"></i> ' +
-					from.toFixed(2) + '% &ndash; ' + to.toFixed(2) + '%');
+					from.toFixed(2) + ' &ndash; ' + to.toFixed(2));
 				}
 			}
 			
@@ -370,7 +456,7 @@ function createLegend(){
 Finally, make sure to add a call to create the legend at the end of your `mapGeoJSON()` function:
 
 ```js
-function mapGeoJSON(field,num_classes,color,scheme){
+function mapGeoJSON(field){
 
 	...
 
@@ -379,7 +465,9 @@ function mapGeoJSON(field,num_classes,color,scheme){
 }
 ```
 
-### Adding hover actions
+## Adding hover actions
+
+<img src="images/choro6.png">
 
 First, set the stage to enable hover actions on each feature in your geojson layer.
 
@@ -389,7 +477,7 @@ Locate the code within the `mapGeoJSON()` function that creates the `geojson_lay
 	// create the geojson layer
 	geojson_layer = L.geoJson(geojson_data,{
 		style: getStyle,
-		onEachFeature: onEachFeature
+		onEachFeature: onEachFeature // actions on each feature
 	}).addTo(map);
 
 ```
@@ -435,11 +523,11 @@ function zoomToFeature(e) {
 
 You see the pattern here? You are in control of user interaction! Each one of these action functions can be modified to fit your user interface design ideas.
 
-### To pop-up or not to pop-up
+## To pop-up or not to pop-up
 
 Thus far, many of us have been using marker popups as a way to reveal information about features on the map. Perhaps a more informative, cleaner, and elegant approach is to use an info panel to display data about features you are hovering over.
 
-#### Create an "info control"
+### Create an "info control"
 
 First create a global variable for the control panel:
 
@@ -475,6 +563,18 @@ function createInfoPanel(){
 }
 ```
 
+Add the call to create the info panel:
+```js
+function mapGeoJSON(field){
+
+	...
+
+	// create the infopanel
+	createLegend();
+}
+```
+
+
 Then, in the `highlightFeature(e)` function, which is triggered when a user hovers over a feature, add the following:
 
 ```js
@@ -485,20 +585,28 @@ function highlightFeature(e){
 
 function resetHighlight(e){
 	...
-	info_panel.update()
+	info_panel.update() // resets infopanel
 }
 ```
 
-## Class exercise
+## Challenge #1:
+
+Create buttons in the sidebar that will allow you to map different variables.
+
+
+## Challenge #2:
 
 Now that we are 'brewing, let's add some additional (useful) arguments to the function. For example, aside from the field to be choropleth'ed, why don't we also request a color pallette, number of classes, and a classfication scheme?
 
-Complete the following function with the added arguments:
+Modify the `mapGeoJSON` function with the added arguments:
 
 ```js
 function mapGeoJSON(field,num_classes,color,scheme){
 	...
 }
 ```
+## Useful Resource
 
+If you have your data in a csv file, and want to add it to a world geojson file, this is a great resource to merge a csv file to a geojson file:
 
+- [Geo DataMerger](https://funkeinteraktiv.github.io/geo-data-merger/)

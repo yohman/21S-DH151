@@ -49,7 +49,7 @@ Notable reactions:
 > "...the theory of thick mapping speaks to a multitude of power structures and systems that shape how we think and interact with each other, and is a reminder that I have to stay vigilant and critical of pervasive forms of knowledge and tropes of understanding, as there are ceaseless places, media, and interpretations to uncover." - Kate
 
 ## Week 7 Lab
-- [Creating choropleth maps](lab)
+- [Creating choropleth maps](Lab)
 
 ## Assignments
 

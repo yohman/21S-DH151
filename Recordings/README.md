@@ -9,3 +9,4 @@ Check back here a day after class to find the latest zoom recordings.
 - [Week 5: CSV Map highlights, Storyboard reveal, Covid map lab](https://ucla.zoom.us/rec/share/KiytV7uzelpwROyBIpZpsB2EME_njr0teCIg1HhqCFjbwFrW3R2koFijO1iG2J4.oP7CdwuMA9s9fRYb?startTime=1619471256000) (lab begins at 0:58 mark)
 - [Week 6: Midterm Presentations](https://ucla.zoom.us/rec/share/QX3VAmmlQKQMh229-bKeHCZevuCzik4EpkyJDVo4SBWg6cZeBNDu7oyM9XI0-Xa2.ioVAZ4E82QmPn6YB?startTime=1620076049000)
    - [Musical Maps Presentation](https://ucla.zoom.us/rec/share/4Px5FTpKGWqvCdvaREXla9TU71_la6CcIYgS8q_5_8Nk-ANbvOvpkSYpmRxCZu8p._Y5T3MbqzA7UoRw7?startTime=1620234202000)
+- [Week 7: Thick Mapping, Choropleth lab](https://ucla.zoom.us/rec/share/xIddBoPsF9WB35wcYpJKe3z0whrvckFj2o2kCLTrhSvlbNPWxQzV4B5LJlQc0OUm.UZyGKoJICFwuFsmm?startTime=1620680932000) (lab begins 1:23)

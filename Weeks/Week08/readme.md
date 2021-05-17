@@ -1,4 +1,4 @@
-# Week 7
+# Week 8
 
 ## Today's agenda:
 
@@ -6,49 +6,27 @@
 - Concerns/questions/comments, all welcome!
 - Let's meet! My office hours are Thursdays from 1-3, or by email appointment ([schedule here](https://calendly.com/yohda/officehours))
 
-## Midterm presentations "out of the box" awards
+## Special guest lecture
 
-### Datart's street view
-<kbd><a href="https://kimjee8955.github.io/Datart/" target="_blank"><img src="images/datart.png"></a></kbd>
+"Mapping the connection between technology and ethics"
+- Albert Kochaphum
+- Campus GIS Coordinator (Office of Advanced Research Computing)
+- Faculty in the Asian American Studies
+- Currently teaching "Asian Am 191A – Web Development and GIS for Social Change: Critical Data for Transforming Civil Society"
 
-### Fantastic timeline
-<kbd><a href="https://lynnt2.github.io/FantasticFour/Midterm/timeline.html" target="_blank"><img src="images/fantastic.png"></a></kbd>
-
-### Musical searches
-<kbd><a href="https://justisg.github.io/TheMusicalMaps/Website/map.html" target="_blank"><img src="images/musical.png"></a></kbd>
-
-## Thick mapping
-
-Notable reactions:
-
-> "Thick mapping is completely different than normal mapping..." - Josephine
-
-> "Considering the role that mapping has played historically in settler-colonialism, thick mapping is almost radical in its practice of bringing different narratives and histories to the forefront." - Alice
-
-> "Thinking about sociology with thick mapping in mind is exciting, as it opens my eyes up to the potential that thick mapping could have for a future sociology project where mapping is used as a research tool." -MJ
-
-> "As a statistics major, the theory of "thick mapping" reminds me to always think about the narrative behind the data that I am analyzing and that data is not just numbers." - Eustina
-
-> ""Thick mapping" is a reminder at the back of my head that not everything we receive or learn about is ever "complete"." - Natasha
-
-> "Thick mapping pushes for us to remember that the lives are not separate from the data..." -Hannah
-
-> "Thick mapping also strives to show the stories and lives of people from an area that might have been erased or silenced..." - Julia Wood
-
-> "...thick mapping is like critical thinking because it allows us to see beyond data and information and to look at different narratives ..." - Haiqi
-
-> "...I can understand thick mapping as a sort of “reversed onion..." - Frida
-
-> "...The idea of HyperCities kind of conveys the Big Brother Ideology of a global time/location map that would map out our whole lives, connecting certain points of my life with edges of influence from many different other points in my life and other people's life... - Ivan
-
-> "...the theory of thick mapping speaks to a multitude of power structures and systems that shape how we think and interact with each other, and is a reminder that I have to stay vigilant and critical of pervasive forms of knowledge and tropes of understanding, as there are ceaseless places, media, and interpretations to uncover." - Kate
-
-## Week 7 Lab
-- [Creating choropleth maps](Lab)
+## Week 8 Lab
+- [Mapathon: creating filters](Lab)
 
 ## Assignments
 
-### Group Assignment #3
+### Individual Assignment: Thinking Cap on "Design Justice"
 
-[Link to assignment](https://github.com/yohman/21S-DH151/blob/main/Group%20Assignments/GroupAssignment3.md)
+What do you think about design justice? How might you apply it in your designs going forward?
 
+- The reading on [Design Justice](https://github.com/albertkun/21S-ASIAAM-191A/blob/main/Week_6/Materials/Design_Justice.pdf) will be important to completing this thinking cap.
+
+Submit your thinking cap [here](https://github.com/yohman/21S-DH151/discussions/65).
+
+### Group Assignment
+
+There are no graded group deliverables for next week. However, in two weeks (Week 10), you will be asked to submit a pre-final prototype/status report (fourth and final group assignment). As your group gears towards the final deadline, I ask that each group answer a [short set of questions](https://github.com/yohman/21S-DH151/discussions/66).

@@ -34,7 +34,17 @@ Inspect the data returned by the console, and create the `mapJSON()` function to
 ### Creating Filters
 Create filters that allow users to show subsets of the crime data. Specifically, allow users to filter by victim ethnicity.
 
+To do so, use the javascript array filter method to filter elements in an array. Here is a great explanation of how this method works:
+
+- https://www.javascripttutorial.net/javascript-array-filter/
+
 As an example, you can use the `.filter` function to subset an existing data array by asking it to return records that match a specific request. The following example shows how to filter the `jsondata` array with only items that have `vict_descent` equal to 'B' (black).
+
+Here is the console output, with the column we want to filter by highlighted:
+
+<kbd><img src="images/filterby.png"></kbd>
+
+To filter the data where `vict_descent` is `B`, the javascript would be:
 
 ```js
 filtered_data = jsondata.filter(item => item.vict_descent === 'B')

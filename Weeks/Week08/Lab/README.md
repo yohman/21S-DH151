@@ -4,7 +4,7 @@ Welcome to week 8! This week, we will be doing a mapathon.
 
 You are given the following tasks:
 
-## Create a victim crime map
+## Part 1: Create a victim crime map
 
 Who is victimized by crime in LA? Using data directly from the LA Data Portal, create a map that shows the location of the last 1000 crime incidents. Allow users to see details about the crime incident when they interact with the markers on the map.
 
@@ -31,7 +31,7 @@ function getJSON(){
 Inspect the data returned by the console, and create the `mapJSON()` function to map it.
 
 
-## Creating Filters
+## Part 2: Creating Filters
 Create filters that allow users to show subsets of the crime data. Specifically, allow users to filter by victim ethnicity.
 
 To do so, use the javascript array filter method to filter elements in an array. Here is a great explanation of how this method works:
@@ -59,7 +59,7 @@ Use the logic above to allow users to filter the data by the different main race
 
 Hint: Add an argument for `race` in your `mapJSON(race)` function.
 
-## Humanize the data
+## Part 3: Humanize the data
 
 <img src="images/human.png">
 
@@ -72,7 +72,7 @@ Simply plotting crime incidents on the map does not convey the human drama behin
 });
 ```
 
-## Changing basemaps
+## Part 4: Changing basemaps
 
 [Mapbox](https://www.mapbox.com/) is an online Web GIS platform that provides beautifully tiled basemaps that can be used with leaflet, provided that you create an account to obtain an access token. The free tier is generous, perfect for student run class projects!
 

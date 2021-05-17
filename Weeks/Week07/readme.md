@@ -29,11 +29,6 @@ Notable reactions:
 
 > "As a statistics major, the theory of "thick mapping" reminds me to always think about the narrative behind the data that I am analyzing and that data is not just numbers." - Eustina
 
-> "Many applications and platforms I use in my day-to-day life utilize thick mapping to enhance the user's experience." -Michelle
-
-> "I think Thick mapping will allow us to tell any kind of story we are passionate about." -Alekhya
-
-
 > ""Thick mapping" is a reminder at the back of my head that not everything we receive or learn about is ever "complete"." - Natasha
 
 > "Thick mapping pushes for us to remember that the lives are not separate from the data..." -Hannah

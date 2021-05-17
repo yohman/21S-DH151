@@ -61,6 +61,8 @@ Hint: Add an argument for `race` in your `mapJSON(race)` function.
 
 #### Humanize the data
 
+<img src="images/human.png">
+
 Simply plotting crime incidents on the map does not convey the human drama behind each marker. Add an interactive `mouseover` event to the markers/circles that conveys the crime incident to the user in a creative and dramatic manner.
 
 ```js

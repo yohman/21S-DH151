@@ -18,8 +18,15 @@
 ## Choropleth Gallery
 <img src="images/choropleths.png">
 
+### Thinking "out of the box" awards
+
+Project | Link
+--- | ---
+cARTographers: Mapping U.S. Art Education | [map](https://kaicolorado.github.io/DH151-Group/index.html)
+Mental Health Crisis and Services in LA County | [map](https://frida-barragan.github.io/DH151/joindata/index.html)
+
 ## Week 8 Lab
-- [Mapathon: creating filters](Lab)
+- [Mapathon: Creating filters | Mapbox Basemaps](Lab)
 
 ## Assignments
 

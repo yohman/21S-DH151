@@ -31,7 +31,7 @@ function getJSON(){
 Inspect the data returned by the console, and create the `mapJSON()` function to map it.
 
 
-### Creating Filters
+## Creating Filters
 Create filters that allow users to show subsets of the crime data. Specifically, allow users to filter by victim ethnicity.
 
 To do so, use the javascript array filter method to filter elements in an array. Here is a great explanation of how this method works:
@@ -59,7 +59,7 @@ Use the logic above to allow users to filter the data by the different main race
 
 Hint: Add an argument for `race` in your `mapJSON(race)` function.
 
-#### Humanize the data
+## Humanize the data
 
 <img src="images/human.png">
 
@@ -98,3 +98,9 @@ streets-v11 | <img src="images/streets.png">
 light-v10 | <img src="images/light.png">
 dark-v10 | <img src="images/dark.png">
 outdoors-v11 | <img src="images/outdoors.png">
+
+### Mapbox Studio
+
+<img src="images/bw.png">
+
+If you want to further customize your basemaps, you can venture into the world of [Mapbox Studio](https://www.mapbox.com/mapbox-studio) and design your own. Here is an example of a black and white satellite basemap, which allows your data to "pop" without color conflicts.

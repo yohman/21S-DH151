@@ -14,6 +14,10 @@
 - Faculty in the Asian American Studies
 - Currently teaching "Asian Am 191A – Web Development and GIS for Social Change: Critical Data for Transforming Civil Society"
 
+
+## Choropleth Gallery
+<img src="images/choropleths.png">
+
 ## Week 8 Lab
 - [Mapathon: creating filters](Lab)
 

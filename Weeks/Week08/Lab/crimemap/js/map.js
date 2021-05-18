@@ -3,7 +3,6 @@ let map;
 let lat = 0;
 let lon = 0;
 let zl = 3;
-let path = 'data/asianhate2.csv';
 let markers = L.featureGroup();
 let jsondata;
 

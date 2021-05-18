@@ -34,6 +34,7 @@ Mental Health Crisis and Services in LA County | [map](https://frida-barragan.gi
 
 What do you think about design justice? How might you apply it in your designs going forward?
 
+- [Albert's presentation](AA191_S_Yoh_Guest_Lecture.pdf)
 - The reading on [Design Justice](https://github.com/albertkun/21S-ASIAAM-191A/blob/main/Week_6/Materials/Design_Justice.pdf) will be important to completing this thinking cap.
 
 Submit your thinking cap [here](https://github.com/yohman/21S-DH151/discussions/65).

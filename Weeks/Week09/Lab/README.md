@@ -6,8 +6,6 @@ Welcome to week 9! This week, we begin by doing a general code review.
 
 ### Your file structure
 
-
-
 ```
 + web root
 + -- index.html
@@ -195,7 +193,7 @@ For this lab, we will look to create data visualizations based on ACS data. The 
 
 The starter files available [here](starter) or by copying and pasting the code below, should produce a US County choropleth map. Open the console, and inspect the data fields that are available.
 
-### index.html
+### `index.html`
 ```html
 <!DOCTYPE html>
 <html>
@@ -214,7 +212,7 @@ The starter files available [here](starter) or by copying and pasting the code b
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 	<!-- classy brew -->
-	<script src="https://raw.githubusercontent.com/tannerjt/classybrew/master/src/classybrew.js"></script>
+	<script src="js/classybrew.js"></script>
 
 </head>
 <body>
@@ -236,7 +234,7 @@ The starter files available [here](starter) or by copying and pasting the code b
 </body>
 </html>
 ```
-### css/style.css
+### `css/style.css`
 ```css
 body,html {
 	margin:0;
@@ -308,7 +306,7 @@ body {
 }
 ```
 
-### js/map.js
+### `js/map.js`
 ```js
 // Global variables
 let map;
@@ -497,10 +495,16 @@ function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
 }
 ```
-### Don't forget classybrew.js
-Classybrew (which allows us to create the choropleth breaks) does not have a cdn. Save and download it into your js folder.
+### `js/classybrew.js`
+Classybrew (which allows us to create the choropleth breaks) does not have a CDN. Save and download it into your js folder.
 
 - https://raw.githubusercontent.com/tannerjt/classybrew/master/src/classybrew.js
+
+### `data/merged.geojson`
+
+And finally, download the data file and put it in your data folder:
+
+- https://github.com/yohman/21S-DH151/blob/staging/Weeks/Week09/Lab/completed/data/merged.geojson
 
 ## Charts
 

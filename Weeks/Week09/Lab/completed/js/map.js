@@ -4,7 +4,6 @@ let lat = 39;
 let lon = -98;
 let zl = 4;
 
-// put this in your global variables
 let geojsonPath = 'data/merged.geojson';
 let geojson_data;
 let geojson_layer;
@@ -12,6 +11,8 @@ let geojson_layer;
 let brew = new classyBrew();
 let legend = L.control({position: 'bottomright'});
 let info_panel = L.control();
+
+let fieldtomap = 'Median Household Income (In 2019 Inflation Adjusted Dollars)';
 
 // initialize
 $( document ).ready(function() {
@@ -38,9 +39,10 @@ function getGeoJSON(){
 		geojson_data = data;
 
 		// call the map function
-		mapGeoJSON('Median Household Income (In 2019 Inflation Adjusted Dollars)',5,'YlOrRd','quantiles');
+		mapGeoJSON(fieldtomap,5,'YlOrRd','quantiles');
 	})
 }
+
 function mapGeoJSON(field,num_classes,color,scheme){
 
 	// clear layers in case it has been mapped already
@@ -73,12 +75,17 @@ function mapGeoJSON(field,num_classes,color,scheme){
 		onEachFeature: onEachFeature // actions on each feature
 	}).addTo(map);
 
+	// turning off fit bounds so that we stay in mainland USA
 	// map.fitBounds(geojson_layer.getBounds())
+
 	// create the legend
 	createLegend();
 
 	// create the infopanel
 	createInfoPanel();
+
+	// create table
+	createTable();
 }
 
 function getStyle(feature){
@@ -116,6 +123,30 @@ function createLegend(){
 		legend.addTo(map);
 }
 
+function createInfoPanel(){
+
+	info_panel.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+		this.update();
+		return this._div;
+	};
+
+	// method that we will use to update the control based on feature properties passed
+	info_panel.update = function (properties) {
+		// if feature is highlighted
+		if(properties){
+			this._div.innerHTML = `<b>${properties['Qualifying Name']}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+		}
+		// if feature is not highlighted
+		else
+		{
+			this._div.innerHTML = 'Hover over a country';
+		}
+	};
+
+	info_panel.addTo(map);
+}
+
 // Function that defines what will happen on user interactions with each feature
 function onEachFeature(feature, layer) {
 	layer.on({
@@ -140,8 +171,21 @@ function highlightFeature(e) {
 		layer.bringToFront();
 	}
 
-	info_panel.update(layer.feature.properties)
-	createDashboard(layer.feature.properties)
+	info_panel.update(layer.feature.properties);
+
+	createDashboard(layer.feature.properties);
+
+}
+
+// on mouse out, reset the style, otherwise, it will remain highlighted
+function resetHighlight(e) {
+	geojson_layer.resetStyle(e.target);
+	info_panel.update() // resets infopanel
+}
+
+// on mouse click on a feature, zoom in to it
+function zoomToFeature(e) {
+	map.fitBounds(e.target.getBounds());
 }
 
 function createDashboard(properties){
@@ -199,38 +243,6 @@ function createDashboard(properties){
 		}
 	}
 	
-	// var chart = new ApexCharts(document.querySelector('.dashboard'), options)
-	// chart.render()
-	
-	// let data = [27,17,17,20]
-	// let fields = ['New York Yankees','LA Lakers','Boston Celtics','Manchester United']
-
-	// let options = {
-	// 	chart: {
-	// 		type: 'bar',
-	// 		height: 300,
-	// 		animations: {
-	// 			enabled: true,
-	// 		}
-	// 	},
-	// 	title: {
-	// 		text: 'Championships Won',
-	// 	},
-	// 	plotOptions: {
-	// 		bar: {
-	// 			horizontal: true
-	// 		}
-	// 	},
-	// 	series: [
-	// 		{
-	// 			data: data
-	// 		}
-	// 	],
-	// 	xaxis: {
-	// 		categories: fields
-	// 	}
-	// }
-	
 	var options2 = {
 		chart: {
 			type: 'pie',
@@ -252,10 +264,7 @@ function createDashboard(properties){
 		  }
 	};
 
-
-	// var chart = new ApexCharts(document.querySelector('.dashboard'), options)
-	// chart.render()
-	var chart = new ApexCharts(document.querySelector('.dashboard'), options2)
+	var chart = new ApexCharts(document.querySelector('.dashboard'), options)
 	chart.render()
   
 }
@@ -263,7 +272,6 @@ function createDashboard(properties){
 function createTable(){
 
 	let datafortable = [];
-	// let datafortable = geojson_data.features;
 
 	geojson_data.features.forEach(function(item){
 		datafortable.push(item.properties)
@@ -304,39 +312,4 @@ function zoomTo(geoid){
 
 	map.fitBounds(zoom2poly[0].getBounds())
 
-}
-
-// on mouse out, reset the style, otherwise, it will remain highlighted
-function resetHighlight(e) {
-	geojson_layer.resetStyle(e.target);
-	info_panel.update() // resets infopanel
-}
-
-// on mouse click on a feature, zoom in to it
-function zoomToFeature(e) {
-	map.fitBounds(e.target.getBounds());
-}
-
-function createInfoPanel(){
-
-	info_panel.onAdd = function (map) {
-		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-		this.update();
-		return this._div;
-	};
-
-	// method that we will use to update the control based on feature properties passed
-	info_panel.update = function (properties) {
-		// if feature is highlighted
-		if(properties){
-			this._div.innerHTML = `<b>${properties['Qualifying Name']}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
-		}
-		// if feature is not highlighted
-		else
-		{
-			this._div.innerHTML = 'Hover over a country';
-		}
-	};
-
-	info_panel.addTo(map);
 }

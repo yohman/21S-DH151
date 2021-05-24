@@ -26,3 +26,4 @@ Submit a fully functional maproom that incorporates the following:
 - User action (hover/click) that triggers the creation of a chart, OR
 - User action on an interactive element outside of the map (like a table or slider) that changes the map in some way
 
+Submit your assignment [here](https://github.com/yohman/21S-DH151/discussions/72)

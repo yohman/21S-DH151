@@ -85,10 +85,11 @@ function mapJSON(race){
 
 	// marker/circle options
 	circleOptions = {
-		'weight':1,
+		'weight':10,
 		'color':'white',
 		'fillColor':'red',
-		'radius': 5,
+		'radius': 10,
+		'opacity':0.5,
 		'fillOpacity': 1
 	}
 

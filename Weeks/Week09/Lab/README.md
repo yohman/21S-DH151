@@ -189,9 +189,6 @@ For this lab, we will look to create data visualizations based on ACS data. The 
 
 ## Starter files
 
-<img src="images/starter.png">
-
-The starter files available [here](starter) or by copying and pasting the code below, should produce a US County choropleth map. Open the console, and inspect the data fields that are available.
 
 ### `index.html`
 ```html
@@ -480,8 +477,6 @@ function highlightFeature(e) {
 
 	info_panel.update(layer.feature.properties);
 
-	createDashboard(layer.feature.properties);
-
 }
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
@@ -505,6 +500,11 @@ Classybrew (which allows us to create the choropleth breaks) does not have a CDN
 And finally, download the data file and put it in your data folder:
 
 - https://github.com/yohman/21S-DH151/blob/staging/Weeks/Week09/Lab/completed/data/merged.geojson
+
+
+<img src="images/starter.png">
+
+The starter files (also available [here](starter)) should produce a US County choropleth map. Open the console, and inspect the data fields that are available.
 
 ## Charts
 
@@ -539,6 +539,13 @@ body {
 }
 ```
 Nice! You should now have a new panel to the right of your map. This is where we will add a dashboard full of data as users interact with the map.
+
+Since our new layout does not use a sidebar, we can safely delete the sidebar div:
+
+```html
+	<!-- delete me -->
+	<div class="sidebar"></div>
+```
 
 So how will the dashboard function? The UI dictates that as a user hovers over the map features, the dashboard will automatically create a report based on the feature highlighted. Our javascript already has a function that handles mouseover actions, so let's create a function call within it. At the bottom of the `highlightFeature()` function, add the call to `createDashboard()`, feeding it the properties of the highlighted feature.
 
@@ -624,9 +631,9 @@ function createDashboard(properties){
 	}
 	
 	// create the chart
-	var chart = new ApexCharts(document.querySelector('.dashboard'), options)
+	let chart = new ApexCharts(document.querySelector('.dashboard'), options)
 	chart.render()
-
+}
 ```
 
 <img src="images/bar.png">
@@ -634,10 +641,10 @@ function createDashboard(properties){
 For a pie chart, replace the options with the following:
 
 ```js
-	var options = {
+	let options = {
 		chart: {
 			type: 'pie',
-			height: 200,
+			height: 400,
 			width: 400,			
 			animations: {
 				enabled: true,
@@ -724,6 +731,17 @@ function createTable(){
 	console.log(datafortable)
 }
 ```
+
+And call the function at the end of the `mapGeoJSON` function:
+
+```js
+function mapGeoJSON(field,num_classes,color,scheme){
+	...
+	// create the table
+	createTable();
+}
+```
+
 Ah! Now our data `datafortable` is in a format that the table can read: objects in an array!
 
 <kbd><img src="images/array.png"></kbd>

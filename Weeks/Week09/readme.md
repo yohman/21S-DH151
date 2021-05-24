@@ -16,7 +16,5 @@
 ## Week 9 Lab
 - [Charts and Tables](Lab)
 
-## Assignments
-
-### Group Assignment #4
-
+## Group Assignment #4
+- Instructions [here](https://github.com/yohman/21S-DH151/blob/main/Group%20Assignments/GroupAssignment4.md)

@@ -11,3 +11,4 @@ Check back here a day after class to find the latest zoom recordings.
    - [Musical Maps Presentation](https://ucla.zoom.us/rec/share/4Px5FTpKGWqvCdvaREXla9TU71_la6CcIYgS8q_5_8Nk-ANbvOvpkSYpmRxCZu8p._Y5T3MbqzA7UoRw7?startTime=1620234202000)
 - [Week 7: Thick Mapping, Choropleth lab](https://ucla.zoom.us/rec/share/xIddBoPsF9WB35wcYpJKe3z0whrvckFj2o2kCLTrhSvlbNPWxQzV4B5LJlQc0OUm.UZyGKoJICFwuFsmm?startTime=1620680932000) (lab begins 1:23)
 - [Week 8: Albert on Mapping Ethics](https://ucla.zoom.us/rec/share/2WrMCmEp8Xze0abLvwnt45CtmxHx87aPmQZ6v1hqUc4dh1Etc5_FgB8Y0Rk1cSg.OO3cZmOHfhGVHQH7?startTime=1621285412000)
+- [Week 9: Silvia on Equity and Justice, Charts and Tables lab](https://ucla.zoom.us/rec/share/I6Sk6zF1POcSvN4g9jIICGzhIGCvNf7loXChh346-_eMTz_NWzQeQX0CM3jmXwGm.N81zbeIgquZ9Vd6E?startTime=1621890468000) (lab begins 1:12)

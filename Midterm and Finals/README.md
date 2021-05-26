@@ -42,7 +42,7 @@ This is an extension of your mid-term project. On top of the deliverables for yo
 1. A choropleth layer
 1. An interactive component like a slider or data table
 1. A interactive dashboard of data the reveals metrics for objects that are highlighted on the map
-1. You are open to suggest an alternative set of deliverables for your project. Submit an outline of your suggested deliverables, and make sure it is pre-approved by your instructor.
+1. You are open to suggest an alternative set of deliverables for your project. If so, submit an outline of your suggested deliverables, and make sure it is pre-approved by your instructor.
 
 Your final project will be graded on the following rubric:
 

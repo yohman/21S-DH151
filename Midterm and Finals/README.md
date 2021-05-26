@@ -35,12 +35,22 @@ The final project is a cumulative and applied group assignment that requires you
 
 ### Instructions
 
-Final instructions TBD (much of this will be based on the direction the group projects lean towards in the final weeks of the course).
+Final instructions (much of this will be based on the direction the group projects lean towards in the final weeks of the course).
 
 This is an extension of your mid-term project. On top of the deliverables for your midterm, your final project must also include:
 
 1. A choropleth layer
-1. An interactive component like a time slider
-1. A interactive dashboard of data the reveals metrics for objects that are highlighted on the map.
-1. An equivalent user interface interaction that is pre-approved by your instructor
+1. An interactive component like a slider or data table
+1. A interactive dashboard of data the reveals metrics for objects that are highlighted on the map
+1. You are open to suggest an alternative set of deliverables for your project. If so, submit an outline of your suggested deliverables, and make sure it is pre-approved by your instructor.
+
+Your final project will be graded on the following rubric:
+
+1. **User interface, user experience, design**: How well does your website flow? Is the layout and design elements intuitive? Is it easy to use? How well does it consider the user's experience?
+3. **Interactive map**: This is, after all, a web-GIS course. The interactive map should be the central driving force of your project. How well does your maproom inform and communicate the intended purpose of the site? Do the data points make sense? Are the choropleth maps informative? Do you have a legend?
+4. **Interactive components**: Beyond the map, we have learned a variety of ways to enhance the user experience through interactive elements that provide additional data visualizations. Do the interactive components like charts, tables, buttons, sliders, etc, function in a way that illuminates additional narratives?
+5. **Originality**: How well have you grasped the course material? Have you created your own functions that work specifically for your project? Does the project have a unique identity beyond what was offered in the labs?
+6. **Usefulness**: Usefulness, thickness, design justice, social/technological determinism, equity, ethical considerations...
+
+
 

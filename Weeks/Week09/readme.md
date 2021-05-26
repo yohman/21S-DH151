@@ -16,6 +16,8 @@
 ## Week 9 Lab
 - [Charts and Tables](Lab)
 
+# Assignments
+
 ## Thinking Cap
 Your final thinking cap assignment is to submit your collective thoughts on our speaker series this quarter:
 

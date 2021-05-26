@@ -35,7 +35,7 @@ The final project is a cumulative and applied group assignment that requires you
 
 ### Instructions
 
-Final instructions TBD (much of this will be based on the direction the group projects lean towards in the final weeks of the course).
+Final instructions (much of this will be based on the direction the group projects lean towards in the final weeks of the course).
 
 This is an extension of your mid-term project. On top of the deliverables for your midterm, your final project must also include:
 
@@ -43,4 +43,13 @@ This is an extension of your mid-term project. On top of the deliverables for yo
 1. An interactive component like a time slider
 1. A interactive dashboard of data the reveals metrics for objects that are highlighted on the map.
 1. An equivalent user interface interaction that is pre-approved by your instructor
+
+Your final project is graded on the following rubric:
+
+1. User interface, user experience: How well does your website flow? Is it intuitive? Easy to use? Does it consider the user's experience?
+2. Design elements: 
+3. Interactive map: This is, after all, a web-GIS course. How well does your maproom inform and communicate the intended purpose of the site?
+4. Interactive components: Beyond the map, we have learned a variety of ways to enhance information 
+5. Originality: 
+6. Usefulness
 

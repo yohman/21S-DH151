@@ -44,12 +44,11 @@ This is an extension of your mid-term project. On top of the deliverables for yo
 1. A interactive dashboard of data the reveals metrics for objects that are highlighted on the map.
 1. An equivalent user interface interaction that is pre-approved by your instructor
 
-Your final project is graded on the following rubric:
+Your final project will be graded on the following rubric:
 
-1. User interface, user experience: How well does your website flow? Is it intuitive? Easy to use? Does it consider the user's experience?
-2. Design elements: 
-3. Interactive map: This is, after all, a web-GIS course. How well does your maproom inform and communicate the intended purpose of the site?
-4. Interactive components: Beyond the map, we have learned a variety of ways to enhance information 
-5. Originality: 
-6. Usefulness
+1. User interface, user experience, design: How well does your website flow? Is the layout and design elements intuitive? Is it easy to use? How well does it consider the user's experience?
+3. Interactive map: This is, after all, a web-GIS course. The interactive map should be the central driving force of your project. How well does your maproom inform and communicate the intended purpose of the site? Do the data points make sense? Are the choropleth maps informative? Do you have a legend?
+4. Interactive components: Beyond the map, we have learned a variety of ways to enhance user interaction with data visualizations. Do the interactive components like charts, tables, buttons, sliders, function in a way that illuminates additional narratives?
+5. Originality: How well have you grasped the course material? Have you created your own functions that work specifically for your project? Does the project have a unique identity beyond what was offered in the labs?
+6. Usefulness: Ultimately
 

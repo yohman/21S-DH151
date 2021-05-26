@@ -50,7 +50,7 @@ Your final project will be graded on the following rubric:
 3. **Interactive map**: This is, after all, a web-GIS course. The interactive map should be the central driving force of your project. How well does your maproom inform and communicate the intended purpose of the site? Do the data points make sense? Are the choropleth maps informative? Do you have a legend?
 4. **Interactive components**: Beyond the map, we have learned a variety of ways to enhance the user experience through interactive elements that provide additional data visualizations. Do the interactive components like charts, tables, buttons, sliders, etc, function in a way that illuminates additional narratives?
 5. **Originality**: How well have you grasped the course material? Have you created your own functions that work specifically for your project? Does the project have a unique identity beyond what was offered in the labs?
-6. **Usefulness**!
+6. **Usefulness**: Usefulness, thickness, design justice, social/technological determinism, equity, ethical considerations...
 
 
 

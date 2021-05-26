@@ -697,7 +697,7 @@ For this lab, we will use js-grid. Add the javascript and css to your `index.htm
 
 ### Create a function that generates the table
 
-Create a new function that will create a table in the footer area. Since we want to display our GeoJSON data in table form, let us first determine how the data needs to be formatted.
+Create a new function that will generate a table in the footer area. Since we want to display our GeoJSON data in table form, let us first determine how the data needs to be formatted.
 
 According to the documentation, the data must be in an array of objects. Here is a sample output from their documentation:
 
@@ -711,7 +711,7 @@ According to the documentation, the data must be in an array of objects. Here is
     ];
 ```
 
-In order to get our data to work, we have to put maniputlate our data so that it adhere's to the data format requirement for the table otuput. So what does our GeoJSON data look like? Recall that we put the data in a global variable `geojson_data`. Output the data in the browser console to inspect it.
+In order to get our data to work, we have to put manipulate our data so that it adhere's to the data format requirement for the table output. So what does our GeoJSON data look like? Recall that we put the data in a global variable `geojson_data`. Output the data in the browser console to inspect it.
 
 <kbd><img src="images/geojson.png"></kbd>
 

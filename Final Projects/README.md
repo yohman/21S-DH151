@@ -5,6 +5,9 @@ Music, art, Asian American history, pollution, climate change, mental health, ed
 ## The Musical Maps: Music During the Pandemic
 Justis Guardia, Daniel Liu, Kai Watanabe
 
+Concept art:
+<img src="images/music8.png">
+Final project:
 <img src="images/music.png">
 
 Our project showcases an interactive map illustrating the listening trends and shifts between the years 2019 and 2020. This shows how the COVID-19 pandemic affected the ways in which users listened to music. This is shown through our data points that represent the concerts that occurred internationally during this time.
@@ -15,6 +18,9 @@ Our project showcases an interactive map illustrating the listening trends and s
 ## Datart
 Annmarie Cong, Eustina Kim, Michelle Lee
 
+Concept art:
+<img src="images/datart8.png">
+Final project:
 <img src="images/datart.png">
 
 Datart is a digital mapping website depicting the progression of Los Angeles public art throughout time. Our dataset included over 1,500 art pieces dated from 1925-2017. To visualize our data, we developed various maps, charts, and image galleries. We also implemented other cool features to make it more interactive and exciting to users.
@@ -25,6 +31,9 @@ Datart is a digital mapping website depicting the progression of Los Angeles pub
 ## Happy Tweet
 Ivan Ma, Josephine Meyer-Hogan, MJ Howland
 
+Concept art:
+<img src="images/happy8.png">
+Final project:
 <img src="images/happy.png">
 
 Happy Tweet is a website focused on digging deeper into the connection between social media and happiness levels. We are interested in seeing how emotions are expressed in social media, specifically via Twitter for the purpose of seeing if there is any correlation between happiness scores and Twitter content.
@@ -36,6 +45,9 @@ Happy Tweet is a website focused on digging deeper into the connection between s
 ## Environmental Racism in Carceral California
 Hannah Lien, Julia Tanenbaum, Lisa Kahn
 
+Concept art:
+<img src="images/env8.png">
+Final project:
 <img src="images/env.png">
 
 This project's website shows the severe presence of multiple environmental hazards throughout California, the location and overwhelming number of prison facilities throughout California, and the correlation between prison locations and environmentally toxic regions. We hope that visualizing this correlation will encourage site visitors to think about how prison abolition, climate justice, and environmental racism are interlinked.
@@ -46,6 +58,9 @@ This project's website shows the severe presence of multiple environmental hazar
 ## How GDP Affects Mismanaged Plastic Waste
 Derek Wang, Eli Aranita, Julia Wood
 
+Concept art:
+<img src="images/ocean8.png">
+Final project:
 <img src="images/ocean.png">
 
 We wanted to look at mismanaged plastic waste worldwide, initially we were interested to develop our narrative around fishing and plastic pollution. However, we transitioned to analyzing how a country's Gross Domestic Product (GDP) affects their mismanaged plastic waste.
@@ -56,6 +71,9 @@ We wanted to look at mismanaged plastic waste worldwide, initially we were inter
 ## Rethink Recycle
 Alice Lu, Hozumi Oshida, Emily Chau
 
+Concept art:
+<img src="images/rethink8.png">
+Final project:
 <img src="images/rethink.png">
 
 The goal of Rethink Recycle is to help users understand the scope of the global waste-management network. The true impact of plastic waste goes beyond sorting one’s recycling; our goal is that Rethink Recycle will make this reality clearer and will provide visitors with resources.
@@ -66,6 +84,9 @@ The goal of Rethink Recycle is to help users understand the scope of the global 
 ## The Weight of Data
 Ryan Orlando, Ainsleigh Douglas, Sebastien Dills
 
+Concept art:
+<img src="images/data8.png">
+Final project:
 <img src="images/data.png">
 
 Our final project looks at the usage of the internet, data, and data centers and how this technology impacts the environment around the world. We added several features aimed to engage the user and educate them on the connection between data and carbon emissions. We hope that this site will inspire users to think more about their impact on the environment as they use the internet.
@@ -76,6 +97,9 @@ Our final project looks at the usage of the internet, data, and data centers and
 ## State-of-the-Climate
 Natasha Grace, Zona Liao, Alekhya Vittalam
 
+Concept art:
+<img src="images/state8.png">
+Final project:
 <img src="images/state.png">
 
 Using geospatial data sets of different countries, our group focuses on mortality rates as a result of varying levels of air pollution. Household air pollution was responsible for 3.8 million deaths around the world (World Health Organisation, 2016). We feel that creating a visual location guide could help us gain a clearer understanding as to where air quality could be detrimental for most and the socioeconomic reasons behind it. Income levels are directly related to the access the country has to making environmental decisions (prioritising profits over less pollution) and then subsequently, how sheltered the people are to being exposed to these potential risks (healthcare, discrimination).
@@ -86,6 +110,9 @@ Using geospatial data sets of different countries, our group focuses on mortalit
 ## Mental Health in Los Angeles County
 Frida Barragan & Kate McInerny
 
+Concept art:
+<img src="images/health8.png">
+Final project:
 <img src="images/health.png">
 
 We used geographical data to explore the current mental health crisis in Los Angeles County. We mapped mental health facilities and intersected this data with demographic and income information. We also included interactive features such as a landing page, buttons and timelines to capture the user's interest.
@@ -96,6 +123,9 @@ We used geographical data to explore the current mental health crisis in Los Ang
 ## Mapping U.S. Art Education
 Alex Haddad & Kai Colorado
 
+Concept art:
+<img src="images/cart8.png">
+Final project:
 <img src="images/cart.png">
 
 Our project explores arts education within the American education and legislative system. We mapped arts education policies and standardized test scores across the United States to visualize the patterns and differences in arts education and academic performance across different states.
@@ -106,6 +136,9 @@ Our project explores arts education within the American education and legislativ
 ## History and Hate
 Labiba Alam, Haiqi, Adriana Romero, Lynn Tieu
 
+Concept art:
+<img src="images/asian8.jpg">
+Final project:
 <img src="images/asian.png">
 
 Our map showcases important events in Asian American history and anti-Asian hate incidents that have occurred over the past year. We hope our website encourages people to think holistically about Asian American hate in the U.S. and remain aware.

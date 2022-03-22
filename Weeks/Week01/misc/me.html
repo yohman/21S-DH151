@@ -33,6 +33,7 @@
 					'title':'Hello Osaka',
 					'lat': 34.6937,
 					'lon': 135.5023,
+					'zoom': 10,
 					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Osaka_Castle_02bs3200.jpg/320px-Osaka_Castle_02bs3200.jpg'
 				},
 				{
@@ -40,6 +41,7 @@
 					'title':'Hello Cali',
 					'lat': 3.4516,
 					'lon': -76.5320,
+					'zoom': 10,
 					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG/320px-Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG'
 				},
 				{
@@ -47,20 +49,23 @@
 					'title':'Hello Bangkok',
 					'lat': 13.7563,
 					'lon': 100.5018,
+					'zoom': 10,
 					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bangkok_skytrain_sunset.jpg/320px-Bangkok_skytrain_sunset.jpg'
 				},
 				{
 					'id': 3,
 					'title':'Hello Tokyo',
-					'lat': 35.6762,
-					'lon': 139.6503,
+					'lat': 35.687998301985985, 
+					'lon': 139.5297974778005,
+					'zoom': 16,
 					'image':'https://www.stofficetokyo.ch/sites/default/files/styles/featured_image_840x572_/public/2019-01/icu_dronei_34ab_170430-42_r.jpg?itok=mkG94UWD'
 				},
 				{
 					'id': 4,
 					'title':'Hello LA',
-					'lat': 34.0522,
-					'lon': -118.2437,
+					'lat': 34.06898317638355, 
+					'lon': -118.44538494718738,
+					'zoom': 16,
 					'image':'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UCLA_Royce_Hall.jpg/320px-UCLA_Royce_Hall.jpg'
 				},
 				{
@@ -68,6 +73,7 @@
 					'title':'Hello Reitaku?',
 					'lat': 35.83300067323384, 
 					'lon': 139.95536520692943,
+					'zoom': 16,
 					'image':'https://www.reitaku-u.ac.jp/_assets/images/facilities/campus-f3-s1.jpg'
 				},
 			]
@@ -91,7 +97,7 @@
 			
 			function goto(id){
 				console.log(id)
-				map.flyTo([data[id].lat,data[id].lon],10)
+				map.flyTo([data[id].lat,data[id].lon],data[id].zoom)
 			}
 
 		</script>	

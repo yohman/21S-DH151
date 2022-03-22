@@ -39,9 +39,9 @@
 				{
 					'id': 1,
 					'title':'Hello Cali',
-					'lat': 3.4516,
-					'lon': -76.5320,
-					'zoom': 10,
+					'lat': 3.429729892370133, 
+					'lon': -76.54106493872214,
+					'zoom': 16,
 					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG/320px-Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG'
 				},
 				{
@@ -49,7 +49,7 @@
 					'title':'Hello Bangkok',
 					'lat': 13.7563,
 					'lon': 100.5018,
-					'zoom': 10,
+					'zoom': 14,
 					'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bangkok_skytrain_sunset.jpg/320px-Bangkok_skytrain_sunset.jpg'
 				},
 				{
@@ -65,7 +65,7 @@
 					'title':'Hello LA',
 					'lat': 34.06898317638355, 
 					'lon': -118.44538494718738,
-					'zoom': 16,
+					'zoom': 15,
 					'image':'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UCLA_Royce_Hall.jpg/320px-UCLA_Royce_Hall.jpg'
 				},
 				{
@@ -80,10 +80,21 @@
 
 			var map = L.map('map').setView([0,0], 2);
 
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			}).addTo(map);
+			// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			// 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			// }).addTo(map);
 			
+			let satellitecolor = L.tileLayer('https://api.mapbox.com/styles/v1/yohman/ckrh25hug05w018ndot6lycob/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoieW9obWFuIiwiYSI6IkxuRThfNFkifQ.u2xRJMiChx914U7mOZMiZw', 
+			{
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox/yohman</a>',
+				maxZoom: 18,
+				tileSize: 512,
+				zoomOffset: -1,
+				accessToken: 'pk.eyJ1IjoieW9obWFuIiwiYSI6IkxuRThfNFkifQ.u2xRJMiChx914U7mOZMiZw'
+			}).addTo(map)
+
+
+
 			// loop through data
 			data.forEach(function(item,index){
 				console.log(item,index)

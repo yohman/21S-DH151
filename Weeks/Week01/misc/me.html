@@ -78,12 +78,10 @@
 				},
 			]
 
+			// create the map
 			var map = L.map('map').setView([0,0], 2);
-
-			// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			// 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			// }).addTo(map);
 			
+			// add a satellite basemap from mapbox
 			let satellitecolor = L.tileLayer('https://api.mapbox.com/styles/v1/yohman/ckrh25hug05w018ndot6lycob/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoieW9obWFuIiwiYSI6IkxuRThfNFkifQ.u2xRJMiChx914U7mOZMiZw', 
 			{
 				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox/yohman</a>',
@@ -93,9 +91,7 @@
 				accessToken: 'pk.eyJ1IjoieW9obWFuIiwiYSI6IkxuRThfNFkifQ.u2xRJMiChx914U7mOZMiZw'
 			}).addTo(map)
 
-
-
-			// loop through data
+			// loop through data and add a marker for each item
 			data.forEach(function(item,index){
 				console.log(item,index)
 				// add marker to map
@@ -106,6 +102,7 @@
 				$('.sidebar').append('<div class="sidebar-item" onclick="goto('+item.id+')"><b>'+item.title+'</b><p><img src="'+item.image+'" width=100%></p></div>')
 			})
 			
+			// function to "fly" to each location
 			function goto(id){
 				console.log(id)
 				map.flyTo([data[id].lat,data[id].lon],data[id].zoom)
